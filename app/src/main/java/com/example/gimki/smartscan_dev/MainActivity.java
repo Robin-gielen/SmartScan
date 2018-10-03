@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    int count;
+    int count = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,18 +24,27 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        final TextView changingText = (TextView) findViewById(R.id.text_to_change);
-        @SuppressLint("WrongViewCast") Button changeTextButton = (Button) findViewById(R.id.change_text_button);
+        final TextView changingText = findViewById(R.id.change_text_button);
+        Button changeTextButton = findViewById(R.id.button);
 
         changeTextButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                changingText.setText("Arno is gay");
+                switch (count) {
+                    case 1: changingText.setText("Is Arno Gay ?"); count++; break;
+                    case 2: changingText.setText("I think he is."); count++; break;
+                    case 3: changingText.setText("Does Fabian think Arno is gay ?"); count++; break;
+                    case 4: changingText.setText("Yes!"); count++; break;
+                    case 5: changingText.setText("Does Arno think Fabian is gay ?"); count++; break;
+                    case 6: changingText.setText("Yes !"); count++; break;
+                    case 7: changingText.setText("Good."); break;
+                }
+
             }
         });
 
     }
-/*
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -57,5 +66,4 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-*/
 }
