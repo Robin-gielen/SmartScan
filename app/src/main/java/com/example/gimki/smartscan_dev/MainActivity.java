@@ -9,11 +9,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    int count;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +27,12 @@ public class MainActivity extends AppCompatActivity {
         final TextView changingText = (TextView) findViewById(R.id.text_to_change);
         @SuppressLint("WrongViewCast") Button changeTextButton = (Button) findViewById(R.id.change_text_button);
 
-
+        changeTextButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                changingText.setText("Arno is gay");
+            }
+        });
 
     }
 /*
