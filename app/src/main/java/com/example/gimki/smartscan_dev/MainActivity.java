@@ -31,34 +31,13 @@ public class MainActivity extends AppCompatActivity {
         changeTextButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                switch (count) {
-                    case 1: changingText.setText("Is Arno Gay ?"); count++; break;
-                    case 2: changingText.setText("I think he is."); count++; break;
-                    case 3: changingText.setText("Does Fabian think Arno is gay ?"); count++; break;
-                    case 4: changingText.setText("Yes!"); count++; break;
-                    case 5: changingText.setText("Does Arno think Fabian is gay ?"); count++; break;
-                    case 6: changingText.setText("Yes !"); count++; break;
-                    case 7: changingText.setText("Good."); break;
-                }
-
-            }
-        });
-
-        Button camera = findViewById(R.id.cameraButton);
-
-        camera.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                /*Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
-                startActivity(intent);
-                */
                 launchActivity();
             }
         });
     }
 
     private void launchActivity() {
-        Intent intent = new Intent(this, Login.class);
+        Intent intent = new Intent(this, SignUp.class);
         startActivity(intent);
     }
 
