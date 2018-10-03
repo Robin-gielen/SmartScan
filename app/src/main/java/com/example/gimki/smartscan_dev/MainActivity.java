@@ -1,6 +1,7 @@
 package com.example.gimki.smartscan_dev;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -43,6 +44,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button camera = findViewById(R.id.cameraButton);
+
+        camera.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
