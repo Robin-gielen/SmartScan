@@ -1,7 +1,7 @@
 package com.example.gimki.smartscan_dev;
 
 import android.content.Context;
-import android.content.SharedPreferences;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import static com.example.gimki.smartscan_dev.KeyValueDB.setPassword;
 import static com.example.gimki.smartscan_dev.KeyValueDB.setUsername;
 
 public class SignUp extends AppCompatActivity {
@@ -39,10 +40,18 @@ public class SignUp extends AppCompatActivity {
 
                 setUsername(mContext, tempUsername);
                 if(tempPassword.equals(tempPasswordVerif)) {
-
+                    setPassword(mContext, tempPassword);
+                    launchActivity();
+                }
+                else {
+                    username.setText("Pswd not identical");
                 }
             }
         });
     }
 
+    private void launchActivity() {
+        Intent intent = new Intent(mContext, Login.class);
+        startActivity(intent);
+    }
 }
