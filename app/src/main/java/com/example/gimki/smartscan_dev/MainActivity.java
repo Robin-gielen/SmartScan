@@ -49,10 +49,17 @@ public class MainActivity extends AppCompatActivity {
         camera.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
+                /*Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
                 startActivity(intent);
+                */
+                launchActivity();
             }
         });
+    }
+
+    private void launchActivity() {
+        Intent intent = new Intent(this, Login.class);
+        startActivity(intent);
     }
 
     @Override
