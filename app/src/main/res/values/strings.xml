@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SmartScan_Dev</string>
+    <string name="action_settings">Settings</string>
+    <string name="text_to_change">This text will change if you press the button</string>
+</resources>
