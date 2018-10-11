@@ -26,13 +26,13 @@ body {
 }
 
 #equipe {
-	height : 80%;
+	height : 90%;
 	width : 25%;
 	background-color: black;
 	border-radius: 20px;
 	opacity: 0.75;
 	text-align : center;
-	display : inline-block;
+	display : block;
 	float: left;
 	margin : 10px 100px 10px 0;
 }
@@ -117,7 +117,7 @@ body {
 
 a {
 	color: white;
-	margin-top: 2%;
+	/**margin-top: 2%;**/
 }
 
 
@@ -223,38 +223,58 @@ form {
 	text-align:center;
 }
 #test2{
-	height: 20%;
+	height: 10%;
 	background-color: black;
 	width: 100%;
 	opacity: 0.75;
 	
 }
 
-#conditions{
-	display : inline-block;
-	left: 50px;
-	margin: auto;
+#cond{
+	text-align : center;
+	left: 75px;
+	display : block;
+	float: left;
+	margin : 40px 100px 10px 75px;
 }
 
 #questions{
-	top: 75px;
-	margin: auto;
-	display : inline-block;
-	left: 75px;
-}
-.texte{
-	background-attachment: fixed;
-	color: white;
 	text-align : center;
-	display: inherit;
-	margin: 50px auto;
+	left: 75px;
+	display : block;
+	float: left;
+	margin : 40px 100px 10px 75px;
 }
 
-#nav3{
-	text-align: center;
-	display: inherit;
-	margin: 50px auto;
-	top: 50px;
+#contact{
+	text-align : center;
+	left: 75px;
+	display : block;
+	float: left;
+	margin : 40px 100px 10px 75px;
+}
+
+#donnees{
+	text-align : center;
+	left: 75px;
+	display : block;
+	float: left;
+	margin : 40px 100px 10px 75px;
+}
+#fcb{
+	/**text-align : center;**/
+	/**left: 75px;**/
+	display : block;
+	float: right;
+	margin : 30px 150px 10px 75px;
+	width: 3%;
+}
+#twitter{
+	/**text-align : center;**/
+	display : block;
+	float: right;
+	margin-top: 30px;
+	width: 3%;
 }
 
 ::-webkit-scrollbar {
