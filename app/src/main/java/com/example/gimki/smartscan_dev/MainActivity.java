@@ -31,15 +31,28 @@ public class MainActivity extends AppCompatActivity {
         changeTextButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                launchActivity();
+                launchActivitySignUp();
+            }
+        });
+
+        Button manualEntryButton = findViewById(R.id.buttonManualEntry);
+        manualEntryButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                launchActivityManualEntry();
             }
         });
     }
 
-    private void launchActivity() {
+    private void launchActivitySignUp() {
         Intent intent = new Intent(this, SignUp.class);
         startActivity(intent);
     }
+    private void launchActivityManualEntry() {
+        Intent intent = new Intent(this, manualEntry.class);
+        startActivity(intent);
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

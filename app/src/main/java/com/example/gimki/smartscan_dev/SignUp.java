@@ -41,7 +41,7 @@ public class SignUp extends AppCompatActivity {
                 setUsername(mContext, tempUsername);
                 if(tempPassword.equals(tempPasswordVerif)) {
                     setPassword(mContext, tempPassword);
-                    launchActivity();
+                    launchActivityLogin();
                 }
                 else {
                     username.setText("Pswd not identical");
@@ -50,7 +50,7 @@ public class SignUp extends AppCompatActivity {
         });
     }
 
-    private void launchActivity() {
+    private void launchActivityLogin() {
         Intent intent = new Intent(mContext, Login.class);
         startActivity(intent);
     }

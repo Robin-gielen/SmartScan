@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".manualEntry"
+    tools:showIn="@layout/activity_manual_entry">
+
+    <ScrollView
+        android:id="@+id/manualEntryView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/manualEntryName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                tools:layout_editor_absoluteX="163dp"
+                tools:layout_editor_absoluteY="28dp" />
+
+            <EditText
+                android:id="@+id/manualEntryNameFill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.503"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="65dp" />
+
+            <TextView
+                android:id="@+id/manualEntryFName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="First Name"
+                tools:layout_editor_absoluteX="163dp"
+                tools:layout_editor_absoluteY="129dp" />
+
+            <EditText
+                android:id="@+id/manualEntryFNameFill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                tools:layout_editor_absoluteX="84dp"
+                tools:layout_editor_absoluteY="169dp" />
+
+            <TextView
+                android:id="@+id/manualEntryMail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                tools:layout_editor_absoluteX="163dp"
+                tools:layout_editor_absoluteY="231dp" />
+
+            <EditText
+                android:id="@+id/manualEntryMailFill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                tools:layout_editor_absoluteX="84dp"
+                tools:layout_editor_absoluteY="260dp" />
+
+            <TextView
+                android:id="@+id/manualEntryJob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Job"
+                tools:layout_editor_absoluteX="163dp"
+                tools:layout_editor_absoluteY="320dp" />
+
+            <EditText
+                android:id="@+id/manualEntryJobFill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                tools:layout_editor_absoluteX="83dp"
+                tools:layout_editor_absoluteY="352dp" />
+
+            <TextView
+                android:id="@+id/manualEntryGSM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone Number"
+                tools:layout_editor_absoluteX="163dp"
+                tools:layout_editor_absoluteY="417dp" />
+
+            <EditText
+                android:id="@+id/manualEntryGSMFill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="phone"
+                tools:layout_editor_absoluteX="82dp"
+                tools:layout_editor_absoluteY="448dp" />
+
+            <TextView
+                android:id="@+id/manualEntryAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address" />
+
+            <EditText
+                android:id="@+id/manualEntryAddressFill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPostalAddress" />
+
+            <TextView
+                android:id="@+id/manualEntryPostalCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Postal Code" />
+
+            <EditText
+                android:id="@+id/manualEntryPostalCodeFill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/manualEntryCompany"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Company" />
+
+            <EditText
+                android:id="@+id/manualEntryCompanyFill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/manualEntryAddButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Contact" />
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

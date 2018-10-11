@@ -37,6 +37,10 @@
         <activity
             android:name=".Logged"
             android:label="@string/title_activity_logged"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".manualEntry"
+            android:label="@string/title_activity_manual_entry"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
