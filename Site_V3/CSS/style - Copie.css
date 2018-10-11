@@ -1,0 +1,219 @@
+@font-face {
+	font-family: 'font';
+	src: url('POLICE/Elcsa.otf');
+}
+
+body {
+	font-family: font;
+	font-size: 130%;
+	background-image: url(fond_2.jpg);
+	background-repeat: no-repeat;
+    background-size: 100%;
+	color: white;
+	overflow: auto;
+	height : 1000px;
+}
+#h1{
+	text-align: center;
+}
+
+#presentation {
+	float: left;
+	width: 25%;
+	height:34em;
+	background-color: black;
+	border-radius: 20px;
+	opacity: 0.75;
+	overflow: auto;
+}
+
+#presentation:hover {
+	opacity: 0.9;
+}
+
+#equipe {
+	padding: 10%
+}
+
+#presentationWeb {
+	padding: 10%
+}
+
+#presentationApp {
+	padding: 10%
+}
+
+
+#smartscanbc {
+	width: 55%;
+	position: absolute;
+	top: -8em;
+	padding: auto;
+	margin: auto;
+	left: 21em;
+}
+
+
+#connexion{
+	width:8%;
+    padding: 30px;
+    background-color: black;
+	border-radius: 20px;
+	opacity: 0.75;
+	float : right;
+	position: absolute;
+	right: 7px;
+	top: 7px;
+	text-align: center;
+}
+
+#connexion:hover {
+	opacity: 0.9;
+}
+
+#telechargement {
+	width:8%;
+    padding: 30px;
+    background-color: black;
+	border-radius: 20px;
+	opacity: 0.75;
+	float : right;
+	position: absolute;
+	right: 7px;
+	top: 7px;
+	text-align: center;
+	margin-top : 200px;
+}
+
+a {
+	color: white;
+	margin-top: 2%;
+}
+
+
+#annonce {
+	float: right;
+	width: 50%;
+	background-color: black;
+	opacity: 0.75;
+	border-radius: 20px;
+	position: absolute;
+	left: 27%;
+	top: 25%;
+	height : 50%;
+}
+#annonce:hover {
+	opacity: 0.9;
+}
+
+#card_1 {
+	width: 25%;
+	margin: 25px;
+}
+#card_2 {
+	width: 25%;
+	margin: 25px;
+}
+#card_3 {
+	width: 25%;
+	margin: 25px;
+}
+#card_4 {
+	width: 25%;
+	margin: 25px;
+}
+#card_5 {
+	width: 25%;
+	margin: 25px;
+}
+#card_6 {
+	width: 25%;
+	margin: 25px;
+}
+#card_7 {
+	width: 20%;
+	margin: 25px;
+}
+#card_8 {
+	width: 20%;
+	margin: 25px;
+}
+#container{
+	background-color: black;
+	border-radius: 20px;
+	opacity: 0.75;
+	width:400px;
+    margin:0 auto;
+    margin-top:10%;
+	text-align: center;
+}
+#container2{
+	background-color: black;
+	border-radius: 20px;
+	opacity: 0.75;
+    width:400px;
+    margin:0 auto;
+    margin-top:5%;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+input[type=submit] {
+    background-color: #800000;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+input[type=submit]:hover {
+    background-color: white;
+    color: #53af57;
+    border: 1px solid #53af57;
+}
+
+form {
+    width:85%;
+    padding: 30px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+#titre{
+	font-size: 50px;
+}
+#inscription{
+	text-align:center;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+section{
+	position : absolute;
+	bottom : 0px;
+	height : 150px;
+	background-color : blue;
+}
