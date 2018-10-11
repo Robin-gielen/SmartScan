@@ -1,0 +1,50 @@
+﻿@font-face {
+	font-family: 'font';
+	src: url('POLICE/Elcsa.otf');
+}
+
+body {
+	font-family: font;
+	font-size: 130%;
+	background-image: url(fond_4.jpg);
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+	color: white;
+	overflow: auto;
+	height : 1000px;
+}
+
+#smartscanbc {
+	width: 55%;
+	position: absolute;
+	top: -8em;
+	padding: auto;
+	margin: auto;
+	left: 15em;
+	display : inline;
+}
+#logoCond{
+	width: 10%;
+	height : 26%;
+	position: static;
+	top: 0em;
+	margin-top: 0;
+	left: 20em;
+	float: left;
+	display: inline-block:
+}
+#condGen{
+	float: left;
+	width: 99%;
+	background-color: black;
+	opacity: 0.75;
+	border-radius: 20px;
+	position: absolute;
+	top: 20%;
+	height : 12%;
+}
+h2{
+	color:white;
+	margin-left: 20px;
+}
