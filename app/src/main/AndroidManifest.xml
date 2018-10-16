@@ -41,6 +41,10 @@
         <activity
             android:name=".manualEntry"
             android:label="@string/title_activity_manual_entry"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".mdpOublie"
+            android:label="@string/title_activity_mdp_oublie"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

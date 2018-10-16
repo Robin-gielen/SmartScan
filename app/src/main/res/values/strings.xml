@@ -6,4 +6,5 @@
     <string name="title_activity_sign_up">SignUp</string>
     <string name="title_activity_logged">Logged</string>
     <string name="title_activity_manual_entry">manualEntry</string>
+    <string name="title_activity_mdp_oublie">mdpOublie</string>
 </resources>

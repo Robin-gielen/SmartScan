@@ -28,6 +28,7 @@ public class Login extends AppCompatActivity {
         mContext = this;
 
         Button login = findViewById(R.id.login_button);
+        Button mdpOublie = findViewById(R.id.loginMDPOublie);
 
         login.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -49,10 +50,25 @@ public class Login extends AppCompatActivity {
                     username.setText("Wrong credentials");
                 }
             }
-            private void launchActivityLogged() {
-                Intent intent = new Intent(mContext, Logged.class);
-                startActivity(intent);
+
+        });
+
+        mdpOublie.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                launchActivityLogin();
             }
-    });
+
+        });
+
+
+    }
+    private void launchActivityLogin() {
+        Intent intent = new Intent(mContext, mdpOublie.class);
+        startActivity(intent);
+    }
+    private void launchActivityLogged() {
+        Intent intent = new Intent(mContext, Logged.class);
+        startActivity(intent);
     }
 }
