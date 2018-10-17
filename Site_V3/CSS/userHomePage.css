@@ -90,6 +90,11 @@ body {
 	top: 23%;
 	height : 10%;
 }
+
+a {
+	color: white;
+	/**margin-top: 2%;**/
+}
 ::-webkit-scrollbar {
     width: 10px;
 }
