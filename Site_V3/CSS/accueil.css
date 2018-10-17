@@ -111,17 +111,16 @@ body {
 #connexion:hover {
 	opacity: 0.9;
 }
-
+#tel{
+	float: left;
+	margin: auto;
+	width: 145%;
+}
 #telechargement {
 	width:8%;
     padding: 30px;
 	float : left;
 	position: absolute;
-}
-#tel{
-	float: left;
-	margin: auto;
-	width: 145%;
 }
 a {
 	color: white;
