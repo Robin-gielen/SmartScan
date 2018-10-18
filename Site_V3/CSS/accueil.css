@@ -3,6 +3,7 @@
 	src: url('Polices/Elcsa.otf');
 }
 
+
 body {
 	font-family: font;
 	font-size: 130%;
@@ -91,7 +92,7 @@ body {
 	margin-top: 0;
 	left: 20em;
 	float: left;
-	display: inline-block:
+	display: inline-block;
 }
 
 #connexion{
@@ -110,21 +111,17 @@ body {
 #connexion:hover {
 	opacity: 0.9;
 }
-
+#tel{
+	float: left;
+	margin: auto;
+	width: 145%;
+}
 #telechargement {
 	width:8%;
     padding: 30px;
-    background-color: black;
-	border-radius: 20px;
-	opacity: 0.75;
-	float : right;
+	float : left;
 	position: absolute;
-	right: 7px;
-	top: 7px;
-	text-align: center;
-	margin-top : 200px;
 }
-
 a {
 	color: white;
 	/**margin-top: 2%;**/

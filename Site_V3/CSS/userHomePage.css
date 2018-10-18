@@ -1,4 +1,4 @@
-﻿@font-face {
+@font-face {
 	font-family: 'font';
 	src: url('Polices/Elcsa.otf');
 }
@@ -65,7 +65,6 @@ body {
 	opacity: 0.75;
 	border-radius: 20px;
 	position: absolute;
-	/**left: 27%;**/
 	top: 20%;
 	height : 75%;
 }
@@ -91,6 +90,11 @@ body {
 	top: 23%;
 	height : 10%;
 }
+
+a {
+	color: white;
+	/**margin-top: 2%;**/
+}
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -108,3 +112,4 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     backg
+}
