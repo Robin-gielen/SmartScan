@@ -3,16 +3,27 @@ package com.example.gimki.smartscan_dev;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+//Mongodb
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+
+
+import org.bson.Document;
+
 import static com.example.gimki.smartscan_dev.KeyValueDB.setPassword;
 import static com.example.gimki.smartscan_dev.KeyValueDB.setUsername;
 
 public class SignUp extends AppCompatActivity {
+
 
     Context mContext;
 
@@ -40,6 +51,16 @@ public class SignUp extends AppCompatActivity {
 
                 setUsername(mContext, tempUsername);
                 if(tempPassword.equals(tempPasswordVerif)) {
+                    /*MongoClientURI uri  = new MongoClientURI("mongodb://\"mich\":\"mich\"@51.75.127.231:27017/admin");
+                    MongoClient client = new MongoClient(uri);
+                    MongoDatabase db = client.getDatabase(uri.getDatabase());
+                    MongoCollection<Document> coll = db.getCollection("newDB");
+
+                    Document doc = new Document("username", username)
+                                    .append("password",password);
+                    coll.insertOne(doc);
+                    client.close();*/
+
                     setPassword(mContext, tempPassword);
                     launchActivityLogin();
                 }
