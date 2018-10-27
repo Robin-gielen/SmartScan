@@ -1,0 +1,199 @@
+﻿@font-face {
+	font-family: 'font';
+	src: url('Polices/Elcsa.otf');
+}
+
+
+body {
+	font-family: font;
+	font-size: 130%;
+	background-image: url(IMG/fond_4.jpg);
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+	color: white;
+	overflow: auto;
+}
+#h1{
+	text-align: center;
+}
+
+#connexion{
+	width:8%;
+    padding: 30px;
+    background-color: black;
+	border-radius: 20px;
+	opacity: 0.75;
+	float : right;
+	position: absolute;
+	right: 7px;
+	top: 7px;
+	text-align: center;
+}
+
+#connexion:hover {
+	opacity: 0.9;
+}
+a {
+	color: white;
+	/**margin-top: 2%;**/
+}
+
+#container2{
+	background-color: black;
+	border-radius: 20px;
+	opacity: 0.75;
+    width:650px;
+    margin:0 auto;
+    margin-top:5%;
+}
+
+input[type=text], input[type=password] {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 10px 0 10px 10px;
+    /**display: inline-block;**/
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+input[type=submit] {
+    background-color: #800000;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+	display : block;
+	position: relative;
+	left: 20px;
+}
+input[type=submit]:hover {
+    background-color: white;
+    color: #53af57;
+    border: 1px solid #53af57;
+}
+#nom{
+	float: left;
+	display : block;
+	position: relative;
+	top: -20px;
+}
+#prenom{
+	float: left;
+	display : block;
+	position: relative;
+	top: -105px;
+	left: 280px;
+}
+#prenomForm{
+	float:right;
+	position: relative;
+	top: -85px;
+}
+
+#adresse{
+	float: left;
+	display : block;
+	position: relative;
+	top: -70px;
+	left: -20px;
+}
+#adresseForm{
+	float:left;
+	position: relative;
+	top: -50px;
+	left: -20px;
+}
+
+#ville{
+	float: left;
+	display : block;
+	position: relative;
+	top: -115px;
+	left: 5px;
+}
+#villeForm{
+	float:right;
+	position: relative;
+	top: -97px;
+	left: 2px;
+}
+
+#email{
+	float: left;
+	display : block;
+	position: relative;
+	top: -70px;
+	left: -10px;
+}
+#emailForm{
+	float:left;
+	position: relative;
+	top: -50px;
+	left: -10px;
+}
+#pseudo{
+	float: left;
+	display : block;
+	position: relative;
+	top: -120px;
+	left: 15px;
+}
+#pseudoForm{
+	float:right;
+	position: relative;
+	top: -95px;
+}
+
+#mdp{
+	float: left;
+	display : block;
+	position: relative;
+	top: -70px;
+	left: -2px;
+}
+#mdpForm{
+	float:left;
+	position: relative;
+	top: -50px;
+	left: 5px;
+}
+#conf{
+	float: left;
+	display : block;
+	position: relative;
+	top: -120px;
+	left: 25px;
+}
+#confForm{
+	float:left;
+	position: relative;
+	top: -97px;
+	left: 20px;
+}
+#check{
+	float:left;
+	position: relative;
+	top: -50px;
+	left: 150px;
+}
+#checkForm{
+	float:left;
+	position: relative;
+	top: 15px;
+	left: -420px;
+}
+
+form {
+    width:85%;
+    padding: 30px;
+}
+#titre{
+	font-size: 50px;
+}
+#inscription{
+	text-align:center;
+}
