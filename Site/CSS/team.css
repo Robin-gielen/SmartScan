@@ -1,0 +1,154 @@
+﻿@font-face {
+	font-family: 'font';
+	src: url('Polices/Elcsa.otf');
+}
+
+body {
+	font-family: font;
+	font-size: 130%;
+	background-image: url(IMG/fond_4.png);
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+	color: white;
+	overflow: auto;
+	height : 100%;
+	background-size: cover;
+}
+
+#entete {
+	text-align: center;
+}
+
+#smartscanbc {
+	width: 50%;
+	text-align: center;
+	margin: auto;
+	margin-left:-7%;
+}
+#logoCond{
+	width: 10%;
+	height : 26%;
+	float: left;
+}
+#condGen{
+	float: left;
+	width: 99%;
+	background-color: black;
+	opacity: 0.75;
+	border-radius: 20px;
+	height : 12%;
+	margin-top: 2%;
+}
+#contact{
+	float: left;
+	width: 99%;
+	background-color: black;
+	opacity: 0.82;
+	border-radius: 20px;
+	height : 40%;
+	margin-top: 5%;
+}
+h2{
+	color:white;
+	margin-left: 20px;
+}
+
+#fabian{
+	display : block;
+	float: left;
+	margin : 25px 15px 10px 15px;
+	width: 10%;
+}
+#fab{
+	display : block;
+	float: left;
+	margin : 15px 15px 10px 0px;
+	width: 110%;
+	border-radius: 20px;
+	left: 50%;
+}
+#robin{
+	display : block;
+	float: left;
+	margin : 25px 15px 10px 15px;
+	width: 10%;
+}
+#rob{
+	display : block;
+	float: left;
+	margin : 15px 15px 10px 0px;
+	width: 110%;
+	border-radius: 20px;
+	left: 50%;
+}
+#arno{
+	display : block;
+	float: left;
+	margin : 25px 15px 10px 15px;
+	width: 10%;
+}
+#arn{
+	display : block;
+	float: left;
+	margin : 15px 15px 10px 0px;
+	width: 110%;
+	border-radius: 20px;
+	left: 50%;
+}
+#tanguy{
+	display : block;
+	float: left;
+	margin : 25px 35px 10px 35px;
+	width: 10%;
+}
+#tang{
+	display : block;
+	float: left;
+	margin : 15px 15px 10px 0px;
+	width: 110%;
+	border-radius: 20px;
+	left: 50%;
+}
+#adelin{
+	display : block;
+	float: left;
+	margin : 25px 15px 10px 15px;
+	width: 10%;
+}
+#adel{
+	display : block;
+	float: left;
+	margin : 15px 15px 10px 0px;
+	width: 110%;
+	border-radius: 20px;
+	left: 50%;
+}
+#maximilien{
+	display : block;
+	float: left;
+	margin : 25px 20px 10px 33px;
+	width: 12%;
+}
+#max{
+	display : block;
+	float: left;
+	margin : 15px 15px 10px 0px;
+	width: 87%;
+	border-radius: 20px;
+	left: 50%;
+}
+#sebastien{
+	display : block;
+	float: left;
+	margin : 25px 20px 10px 20px;
+	width: 12%;
+}
+#seb{
+	display : block;
+	float: left;
+	margin : 15px 15px 10px 0px;
+	width: 90%;
+	border-radius: 20px;
+	left: 50%;
+}
