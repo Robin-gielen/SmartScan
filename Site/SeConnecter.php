@@ -5,7 +5,7 @@
     </head>
     <body>
         <div id="container">
-            <form action="verification.php" method="POST">
+            <form action="" method="POST">
                 <h1 id="titre">Connexion</h1>
                 
                 <label><b>Nom d utilisateur</b></label>
@@ -21,6 +21,7 @@
             </form>
         </div>
 		<?php
+		
 			if(isset($_POST["submit"])){
 				$servername = "172.17.0.4:3306";
 				$username = "show";
@@ -33,9 +34,19 @@
 				die("Connection failed: " . $conn->connect_error);
 				}
 				
-				$cli_username = $_POST["cli_username"];
-				$cli_password = $_POST["cli_password"];
-					mysqli_query($conn,"select password from Utilisateurs where username ='$cli_username'";)
+				
+				if(isset($_POST["cli_username"])&& isset($_POST["cli_password"])){
+					$cli_username = $_POST["cli_username"];
+					$cli_password = $_POST["cli_password"];
+					$result = $mysqli->query("select * from Utilisateurs where username ='$cli_username' and password='$cli_password'")or die($mysqli->error());
+					if($result->num_rows>0){
+						?>
+						<script>
+						console.log('Connecté');
+						</script>
+						<?php
+					}
+				}
 				}
 				
 		?>
