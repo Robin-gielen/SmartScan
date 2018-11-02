@@ -13,6 +13,8 @@ body {
     background-size: 100%;
 	color: white;
 	overflow: auto;
+	background-size: cover;
+	margin: 0;
 }
 
 #smartscanbc {
