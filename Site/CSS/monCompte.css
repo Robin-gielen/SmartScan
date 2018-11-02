@@ -1,0 +1,96 @@
+﻿@font-face {
+	font-family: 'font';
+	src: url('Polices/Elcsa.otf');
+}
+
+
+body {
+	font-family: font;
+	font-size: 130%;
+	background-image: url(IMG/fond_4.png);
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+	color: white;
+	overflow: auto;
+}
+
+#smartscanbc {
+	width: 55%;
+	position: absolute;
+	top: -21%;
+	padding: auto;
+	margin: auto;
+	left: 21%;
+	display : inline;
+}
+
+#logo{
+	width: 10%;
+	height : 26%;
+	position: static;
+	left: 20%;
+	float: left;
+	display: inline-block:
+}
+
+#compte{
+	float: left;
+	width: 40%;
+	background-color: black;
+	opacity: 0.75;
+	border-radius: 4%;
+	position: relative;
+	right: -19%;
+	bottom: -150px;
+	height : 110%;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 1.5% 20%;
+    margin: 2% 0;
+    display: inline-block;
+    border: 1% solid #ccc;
+    box-sizing: border-box;
+}
+
+
+input[type=submit] {
+    background-color: #800000;
+    color: white;
+    padding: 3% 20%;
+    margin: 5% 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+input[type=submit]:hover {
+    background-color: white;
+    color: #53af57;
+    border: 1px solid #53af57;
+}
+
+form {
+    width:85%;
+    padding: 4%;
+    box-shadow: 0 0 20% 0 rgba(0, 0, 0, 0.2), 0 5% 5% 0 rgba(0, 0, 0, 0.24);
+}
+
+::-webkit-scrollbar {
+    width: 0.7%;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    backg
