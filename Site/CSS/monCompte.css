@@ -80,6 +80,19 @@ form {
     box-shadow: 0 0 20% 0 rgba(0, 0, 0, 0.2), 0 5% 5% 0 rgba(0, 0, 0, 0.24);
 }
 
+#supprimer{
+	width:5%;
+    padding: 1%;
+    background-color: red;
+	border-radius: 20%;
+	opacity: 0.50;
+	float : right;
+	position: absolute;
+	right: 1%;
+	top: 1%;
+	text-align: center;
+}
+
 ::-webkit-scrollbar {
     width: 0.7%;
 }
