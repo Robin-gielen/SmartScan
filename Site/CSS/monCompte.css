@@ -51,7 +51,7 @@ body {
 
 input[type=text], input[type=password] {
     width: 100%;
-    padding: 1.5% 20%;
+    padding: 1.5% 1%;
     margin: 2% 0;
     display: inline-block;
     border: 1% solid #ccc;
