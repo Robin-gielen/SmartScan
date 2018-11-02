@@ -18,22 +18,23 @@ body {
 }
 
 #smartscanbc {
-	width: 55%;
+	width: 50%;
 	position: absolute;
-	top: -21%;
+	top: 2%;
 	padding: auto;
 	margin: auto;
-	left: 21%;
+	left: 25%;
 	display : inline;
 }
 
 #logo{
-	width: 10%;
+	width: 8%;
 	height : 26%;
 	position: static;
+	margin-top: 1%;
 	left: 20%;
 	float: left;
-	display: inline-block:
+	display: inline-block;
 }
 
 #compte{
@@ -43,7 +44,7 @@ body {
 	opacity: 0.75;
 	border-radius: 4%;
 	position: relative;
-	right: -19%;
+	right: -22%;
 	bottom: -150px;
 	height : 110%;
 }
