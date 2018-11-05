@@ -1,5 +1,6 @@
 <?php
-session_start();
+	session_start();
+	$_SESSION['logged_in']= false; //to know if the user is already logged and by default no
 ?>
 <html>
     <head>
@@ -24,8 +25,8 @@ session_start();
             </form>
         </div>
 		<?php
-		
-			if(isset($_POST["submit"])){
+			
+				if(isset($_POST['login'])){
 				$servername = "172.17.0.4:3306";
 				$username = "show";
 				$password = "vue123";
@@ -36,23 +37,31 @@ session_start();
 				if ($conn->connect_error) {
 				die("Connection failed: " . $conn->connect_error);
 				}
-				
-				
-				if(isset($_POST['login']){
-					$cli_username = $_POST["cli_username"];
-					$cli_password = $_POST["cli_password"];
-					$result = $mysqli->query("select * from Utilisateurs where username ='$cli_username' and password='$cli_password'")or die($mysqli->error());
-					if($result->num_rows>0){
-						?>
-						<script>
-						console.log('Connecté');
-						</script>
-						<?php
-						$_SESSION['username']= $_POST["cli_username"];
-						$_SESSION['password']= $_POST["cli_password"];
+					$cli_username = $mysqli->escape_string($_POST['cli_username']);
+					$cli_password =$mysqli->escape_string($_POST['cli_password']);
+					$_SESSION['pseudo']=$cli_username;
+					$_SESSION['password']= $cli_password;
+					$result = $mysqli->query("select * from Utilisateurs where pseudo ='$cli_username' and password='$cli_password'")or die($mysqli->error());
+					if( $result->num_rows == 0){
+						$_SESSION['message']= "This user doesn't exist !";
+						header("location: SeConnecter.php");
+					}
+					else{
+						$user =$result->fetch_assoc();
+						echo $user;
+						if($_POST['password'] === $user['password']){
+							$_SESSION['pseudo'] = $cli_username;
+							$_SESSION['password'] = $cli_password;
+							$_SESSION['logged_in'] = true;
+							header("Location: userHomePage.html");die;
+						}
+						else{
+							$_SESSION['message'] = "You have enter a wrong password, try again!";
+							header("Location: SeConnecter.php");die;
+						}
 					}
 				}
-				}
+				
 				
 		?>
     </body>
