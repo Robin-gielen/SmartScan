@@ -1,11 +1,22 @@
 <?php
 	session_start();
 	$_SESSION['logged_in']= false; //to know if the user is already logged and by default no
+	print $_SESSION['message'];
 ?>
 <html>
     <head>
        <meta charset="utf-8">
         <link rel="stylesheet" href="CSS/accueil.css" media="screen" type="text/css" />
+		<script>
+function myFunctionConn()
+{
+alert("Connected"); // this is the message in ""
+}
+function myFunctionNotConn()
+{
+alert("Not Connected"); // this is the message in ""
+}
+</script>
     </head>
     <body>
         <div id="container">
@@ -25,11 +36,10 @@
             </form>
         </div>
 		<?php
-			
 				if(isset($_POST['login'])){
 				$servername = "172.17.0.4:3306";
-				$username = "show";
-				$password = "vue123";
+				$username = "compte";
+				$password = "smart123";
 				$dbname = "smartscan";
 				// Create connection
 				$conn = new mysqli($servername, $username, $password, $dbname);
@@ -37,26 +47,33 @@
 				if ($conn->connect_error) {
 				die("Connection failed: " . $conn->connect_error);
 				}
-					$cli_username = $mysqli->escape_string($_POST['cli_username']);
-					$cli_password =$mysqli->escape_string($_POST['cli_password']);
+					$cli_username = $conn->escape_string($_POST['cli_username']);
+					$cli_password =$conn->escape_string($_POST['cli_password']);
 					$_SESSION['pseudo']=$cli_username;
 					$_SESSION['password']= $cli_password;
-					$result = $mysqli->query("select * from Utilisateurs where pseudo ='$cli_username' and password='$cli_password'")or die($mysqli->error());
+					
+					$result = $conn->query("select * from Utilisateurs where pseudo ='$cli_username'")or die($mysqli->error());
+
 					if( $result->num_rows == 0){
 						$_SESSION['message']= "This user doesn't exist !";
-						header("location: SeConnecter.php");
+						print $_SESSION['message'];
+						header("Location: SeConnecter.php");
 					}
 					else{
+						print "test";
 						$user =$result->fetch_assoc();
-						echo $user;
-						if($_POST['password'] === $user['password']){
+						print "test2";
+						if($cli_password === $user['password']){
 							$_SESSION['pseudo'] = $cli_username;
 							$_SESSION['password'] = $cli_password;
 							$_SESSION['logged_in'] = true;
+							$_SESSION['message'] = "You are connected!";
+							print $_SESSION['message'];
 							header("Location: userHomePage.html");die;
 						}
 						else{
-							$_SESSION['message'] = "You have enter a wrong password, try again!";
+							$_SESSION['message'] =$_POST['cli_password'];
+							print $_SESSION['message'];
 							header("Location: SeConnecter.php");die;
 						}
 					}
