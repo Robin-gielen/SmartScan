@@ -1,8 +1,7 @@
 ﻿@font-face {
 	font-family: 'font';
-	src: url('Polices/Medel.ttf');
+	src: url('Polices/Elcsa.otf');
 }
-
 
 body {
 	font-family: font;
@@ -13,9 +12,7 @@ body {
     background-size: 100%;
 	color: white;
 	overflow: auto;
-	height : 100%;
 	background-size: cover;
-	margin: 0;
 }
 #h1{
 	text-align: center;
@@ -49,7 +46,6 @@ a {
     width:650px;
     margin:0 auto;
     margin-top:5%;
-	font-size: 70%;
 }
 
 input[type=text], input[type=password] {
