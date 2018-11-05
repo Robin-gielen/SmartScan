@@ -59,6 +59,19 @@ body {
 	top: 5%;
 	text-align: center;
 }
+#ajoutCarte{
+	width:4.5%;
+    padding: 1%;
+    background-color: black;
+	border-radius: 20%;
+	opacity: 0.75;
+	float : right;
+	position: absolute;
+	right: 20%;
+	top: 23%;
+	text-align: center;
+	font-size: 1.2 vw;
+}
 #groupe{
 	float: left;
 	width: 12%;
