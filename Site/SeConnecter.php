@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html>
     <head>
        <meta charset="utf-8">
@@ -16,7 +19,7 @@
                 <label><b>Mot de passe</b></label>
                 <input type="password" placeholder="Entrer le mot de passe" name="cli_password" required>
 
-                <input type="submit" id='submit' value='LOGIN' >
+                <input type="submit" id='submit' value='LOGIN' name ="login" >
 				<p>Nom d'utilisateur ou mot de passe oublié ?</p> 
             </form>
         </div>
@@ -35,7 +38,7 @@
 				}
 				
 				
-				if(isset($_POST["cli_username"])&& isset($_POST["cli_password"])){
+				if(isset($_POST['login']){
 					$cli_username = $_POST["cli_username"];
 					$cli_password = $_POST["cli_password"];
 					$result = $mysqli->query("select * from Utilisateurs where username ='$cli_username' and password='$cli_password'")or die($mysqli->error());
@@ -45,6 +48,8 @@
 						console.log('Connecté');
 						</script>
 						<?php
+						$_SESSION['username']= $_POST["cli_username"];
+						$_SESSION['password']= $_POST["cli_password"];
 					}
 				}
 				}
