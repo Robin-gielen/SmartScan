@@ -24,6 +24,7 @@ if(isset($_SESSION['pseudo'])) {
 				else{
 							$userId =$result->fetch_assoc();
 							$id_Utilisateur=$userId['id_Utilisateur'];
+							$_SESSION['id_Utilisateur']=$id_Utilisateur;
 							$username2 = "show";
 							$password2 = "vue123";
 							$conn2 = new mysqli($servername, $username2, $password2, $dbname);
