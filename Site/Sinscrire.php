@@ -1,4 +1,8 @@
-﻿<html>
+<?php
+		session_start();
+		echo $_SESSION['message'];
+?>
+<html>
     <head>
        <meta charset="utf-8">
 		<title>Inscription</title>
@@ -60,3 +64,4 @@
 				}
 		?>
     </body>
+</html>

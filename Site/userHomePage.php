@@ -70,19 +70,19 @@ if(isset($_SESSION['pseudo'])) {
 	<body>
 		<div id='header'>
 			<nav>
-				<a href='userHomePage.html'><img id='smartscanbc' src='CSS/IMG/smartscanbc.png' alt='SmartScanBC'></a>
+				<a href='userHomePage.php'><img id='smartscanbc' src='CSS/IMG/smartscanbc.png' alt='SmartScanBC'></a>
 			</nav>	
 			<nav>
-				<a href='userHomePage.html'><img id='logo' src='CSS/IMG/logo.png' alt='SmartScanBC'></a>
+				<a href='userHomePage.php'><img id='logo' src='CSS/IMG/logo.png' alt='SmartScanBC'></a>
 			</nav>
 			<nav>
 				<div id='compte'>
-					<a href='compte.html'>Mon compte</a>
+					<a href='compte.php'>Mon compte</a>
 				</div>
 			</nav>
 			<nav>
 				<div id='ajoutCarte'>
-					<a href='ajoutCartes.html'>Ajouter une carte</a>
+					<a href='ajoutCartes.php'>Ajouter une carte</a>
 				</div>
 			</nav>
 			<nav id='groupe'>
