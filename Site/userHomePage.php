@@ -1,61 +1,8 @@
 
-<!DOCTYPE html>
-<html lang="fr">
-	<head>
-		<meta charset="utf-8">
-		<title>SmartScanBC</title>
-		<link rel="stylesheet" href="CSS/userHomePage.css">
-		<link rel="icon" type="image/png" href="CSS/IMG/logo.png"/>
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-		<script>
-	function afficheMesCartes($content){
-		$("cartes").replaceWith($content);
-		}
-	</script>
-	</head>
-	<body>
-		<div id="header">
-			<nav>
-				<a href="userHomePage.html"><img id="smartscanbc" src="CSS/IMG/smartscanbc.png" alt="SmartScanBC"></a>
-			</nav>	
-			<nav>
-				<a href="userHomePage.html"><img id="logo" src="CSS/IMG/logo.png" alt="SmartScanBC"></a>
-			</nav>
-			<nav>
-				<div id="compte">
-					<a href="compte.html">Mon compte</a>
-				</div>
-			</nav>
-			<nav>
-				<div id="ajoutCarte">
-					<a href="ajoutCartes.html">Ajouter une carte</a>
-				</div>
-			</nav>
-			<nav id="groupe">
-			</nav>
-			<nav id="cartes">
-				<span id="listeCartes">
-				</span>
-			</nav>
-			<nav id="tri">
-			</nav>
-		</div>
-</body>
+
 <?php
  session_start();
- function format($g){
 
-          array_multisort($g, SORT_ASC);
-          echo "<table>";
-          foreach($g as $key=>$row) {
-              echo "<tr>";
-              foreach($row as $key2=>$row2){
-                  echo "<td>" . $row2 . "</td>";
-              }
-              echo "</tr>";
-          }
-          echo "</table>";
-         }
 if(isset($_SESSION['pseudo'])) {
 				$servername = "172.17.0.4:3306";
 				$username = "compte";
@@ -109,7 +56,44 @@ if(isset($_SESSION['pseudo'])) {
  										 }
 									}
 										$str.= "</table>";
-										echo $str;
+										//echo $str;
+									echo"<!DOCTYPE html>
+<html lang='fr'>
+	<head>
+		<meta charset='utf-8'>
+		<title>SmartScanBC</title>
+		<link rel='stylesheet' href='CSS/userHomePage.css'>
+		<link rel='icon' type='image/png' href='CSS/IMG/logo.png'/>
+		
+	</head>
+	<body>
+		<div id='header'>
+			<nav>
+				<a href='userHomePage.html'><img id='smartscanbc' src='CSS/IMG/smartscanbc.png' alt='SmartScanBC'></a>
+			</nav>	
+			<nav>
+				<a href='userHomePage.html'><img id='logo' src='CSS/IMG/logo.png' alt='SmartScanBC'></a>
+			</nav>
+			<nav>
+				<div id='compte'>
+					<a href='compte.html'>Mon compte</a>
+				</div>
+			</nav>
+			<nav>
+				<div id='ajoutCarte'>
+					<a href='ajoutCartes.html'>Ajouter une carte</a>
+				</div>
+			</nav>
+			<nav id='groupe'>
+			</nav>
+			<nav id='cartes'>
+				.$str.
+			</nav>
+			<nav id='tri'>
+			</nav>
+		</div>
+</body>
+</html>";
 								} 
 								    
 								    	  
@@ -118,4 +102,3 @@ if(isset($_SESSION['pseudo'])) {
 				}
 }
 ?>
-</html>
