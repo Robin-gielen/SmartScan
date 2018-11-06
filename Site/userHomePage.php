@@ -36,7 +36,7 @@ if(isset($_SESSION['pseudo'])) {
 							else{
 
 								$myCards = mysqli_fetch_all($result2,MYSQLI_ASSOC);
-									$str = "<table><tr><th>Nom</th><th>Prenom</th><th>Mail</th><th>Telephone</th><th>Adresse</th><th>Localite</th><th>NomSociete</th><th>Activite</th></tr>";
+									$str = "<table><tr><th>Nom</th><th>Prenom</th><th>Mail</th><th>Telephone</th><th>Adresse</th><th>Localite</th><th>NomSociete</th><th>Activite</th><th>Site web</th></tr>";
 									if($myCards) {
 										  foreach($myCards as $val) {
 										    $str .= "<tr>";
@@ -48,6 +48,7 @@ if(isset($_SESSION['pseudo'])) {
 										    $str .= "<td>" . $val['Localite'] . "</td>";
 											$str .= "<td>" . $val['NomSociete'] . "</td>";
 										    $str .= "<td>" . $val['Activite'] . "</td>";
+											$str .= "<td>" . $val['SiteWeb'] . "</td>";
 										    // add other td here if there's more
 
 										    // end of tr
