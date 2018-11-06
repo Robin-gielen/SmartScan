@@ -10,6 +10,7 @@ body {
 	background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100%;
+	height: 100%;
 	color: white;
 	overflow: auto;
 	background-size: cover;
@@ -75,124 +76,58 @@ input[type=submit]:hover {
     color: #53af57;
     border: 1px solid #53af57;
 }
-#nom{
-	float: left;
-	display : block;
-	position: relative;
-	top: -20px;
-}
-#prenom{
-	float: left;
-	display : block;
-	position: relative;
-	top: -105px;
-	left: 280px;
-}
-#prenomForm{
-	float:right;
-	position: relative;
-	top: -85px;
+
+#nomform{
+	width: 35%;
 }
 
-#adresse{
-	float: left;
-	display : block;
-	position: relative;
-	top: -70px;
-	left: -20px;
+#prenom{
+	float: right;
 }
-#adresseForm{
-	float:left;
-	position: relative;
-	top: -50px;
-	left: -20px;
+
+#prenomform {
+	width: 67%;
+}
+
+#adresseform{
+	width: 29.5%;
 }
 
 #ville{
-	float: left;
-	display : block;
-	position: relative;
-	top: -115px;
-	left: 5px;
-}
-#villeForm{
-	float:right;
-	position: relative;
-	top: -97px;
-	left: 2px;
+	float: right;
 }
 
-#email{
-	float: left;
-	display : block;
-	position: relative;
-	top: -70px;
-	left: -10px;
-}
-#emailForm{
-	float:left;
-	position: relative;
-	top: -50px;
-	left: -10px;
-}
-#pseudo{
-	float: left;
-	display : block;
-	position: relative;
-	top: -120px;
-	left: 15px;
-}
-#pseudoForm{
-	float:right;
-	position: relative;
-	top: -95px;
+#villeform {
+	width: 76%;
 }
 
-#mdp{
-	float: left;
-	display : block;
-	position: relative;
-	top: -70px;
-	left: -2px;
+#emailform {
+	width: 34%;
 }
-#mdpForm{
-	float:left;
-	position: relative;
-	top: -50px;
-	left: 5px;
+
+#pseudo {
+	float: right;
 }
+
+#pseudoform {
+	width: 68%;
+}
+
+#mdpform{
+	width: 35%;
+}
+
 #conf{
-	float: left;
-	display : block;
-	position: relative;
-	top: -120px;
-	left: 25px;
+	float: right;
 }
-#confForm{
-	float:left;
-	position: relative;
-	top: -97px;
-	left: 20px;
-}
-#check{
-	float:left;
-	position: relative;
-	top: -50px;
-	left: 150px;
-}
-#checkForm{
-	float:left;
-	position: relative;
-	top: 15px;
-	left: -420px;
+
+#confform{
+	width: 62%;
 }
 
 form {
     width:85%;
     padding: 30px;
-}
-#titre{
-	font-size: 50px;
 }
 #inscription{
 	text-align:center;
