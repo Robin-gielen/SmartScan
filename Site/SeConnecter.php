@@ -69,7 +69,7 @@ alert("Not Connected"); // this is the message in ""
 							$_SESSION['logged_in'] = true;
 							$_SESSION['message'] = "You are connected!";
 							print $_SESSION['message'];
-							header("Location: userHomePage.html");die;
+							header("Location: userHomePage.php");die;
 						}
 						else{
 							$_SESSION['message'] =$_POST['cli_password'];
