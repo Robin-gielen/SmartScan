@@ -1,4 +1,17 @@
-﻿<!DOCTYPE html>
+<?php
+	session_start();
+	if (isset($_GET['hello'])) {
+			//remove PHPSESSID from browser
+			if ( isset( $_COOKIE[session_name()] ) )
+			setcookie( session_name(), “”, time()-3600, “/” );
+			//clear session from globals
+			$_SESSION = array();
+			//clear session from disk
+			session_destroy();
+			header("Location: http://www.smartscan-bc.ovh");
+			}
+?>
+<!DOCTYPE html>
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
@@ -22,7 +35,7 @@
 			</nav>
 			<nav>
 				<div id="deco">
-					<a">Déconnexion</a>
+					<a href='?hello=true''>Déconnexion</a>
 				</div>
 			</nav>
 			<nav id="compte">
