@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿<?php
+ session_start();
+ ?>
+<!DOCTYPE html>
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
@@ -22,7 +25,7 @@
 			</nav>
 			<nav>
 				<div id="deco">
-					<a>Déconnexion</a>
+					<a href='?hello=true''>Déconnexion</a>
 				</div>
 			</nav>
 			<nav id="compte">
