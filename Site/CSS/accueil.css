@@ -56,7 +56,19 @@ body {
 	right: 1%;
 	font-size: 1.3vw;
 }
-
+#mesCartes{
+	width:10%;
+    padding: 1%;
+    background-color: black;
+	border-radius: 20px;
+	opacity: 0.75;
+	float : right;
+	position: absolute;
+	right: 2%;
+	top: 17%;
+	text-align: center;
+	font-size: 180%;
+}
 
 #content {
 	width: 100%;
