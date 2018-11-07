@@ -48,6 +48,18 @@ body {
 	bottom: -150px;
 	height : 110%;
 }
+#deco{
+	width:5%;
+    padding: 1%;
+    background-color: black;
+	border-radius: 20%;
+	opacity: 0.75;
+	float : right;
+	position: absolute;
+	right: 2%;
+	top: 17%;
+	text-align: center;
+}
 
 input[type=text], input[type=password] {
     width: 100%;

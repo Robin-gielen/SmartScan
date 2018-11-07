@@ -92,7 +92,18 @@ form {
 	top: 1%;
 	text-align: center;
 }
-
+#deco{
+	width:5%;
+    padding: 1%;
+    background-color: black;
+	border-radius: 20%;
+	opacity: 0.75;
+	float : right;
+	position: absolute;
+	right: 1%;
+	top: 15%;
+	text-align: center;
+}
 ::-webkit-scrollbar {
     width: 0.7%;
 }
