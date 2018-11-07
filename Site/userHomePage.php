@@ -54,7 +54,18 @@ if(isset($_SESSION['pseudo'])) {
  										 }
 									}
 										$str.= "</table>";
-										//echo $str;
+										$_SESSION['table']=$str;
+										$table=$_SESSION['table'];
+										if (isset($_GET['hello'])) {
+											//remove PHPSESSID from browser
+											if ( isset( $_COOKIE[session_name()] ) )
+											setcookie( session_name(), “”, time()-3600, “/” );
+											//clear session from globals
+											$_SESSION = array();
+											//clear session from disk
+											session_destroy();
+											header("Location: http://www.smartscan-bc.ovh");
+										  }
 									echo"<!DOCTYPE html>
 <html lang='fr'>
 	<head>
@@ -78,8 +89,8 @@ if(isset($_SESSION['pseudo'])) {
 				</div>
 			</nav>
 			<nav>
-				<div id="deco">
-					<a>Déconnexion</a>
+				<div id='deco'>
+					<a href='?hello=true''>Déconnexion</a>
 				</div>
 			</nav>
 			<nav>
@@ -90,7 +101,7 @@ if(isset($_SESSION['pseudo'])) {
 			<nav id='groupe'>
 			</nav>
 			<nav id='cartes'>
-				.$str.
+				.$table.
 			</nav>
 			<nav id='tri'>
 			</nav>
