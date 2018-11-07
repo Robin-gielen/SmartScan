@@ -30,6 +30,11 @@
 					<br>
 					<a href="Sinscrire.php">S'inscrire</a>
 			</nav>
+			<nav>
+				<div id="mesCartes">
+					<a href="userHomePage.php">Mes Cartes</a>
+				</div>
+			</nav>
 		</div>	
 		
 		<div id="content">
