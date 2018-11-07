@@ -107,7 +107,7 @@ body {
 	border-radius: 20px;
 	opacity: 0.75;
 	text-align : center;
-	font-size: 140%;
+	font-size: 1.3vw;
 	float: left;
 	margin: 2%;
 }
@@ -153,7 +153,7 @@ a {
 
 #card_1 {
 	width: 8%;
-	margin: 35px 20px 20px 20px;
+	margin: 1.5%;
 }
 
 #container{
@@ -272,18 +272,6 @@ form {
     background: #555; 
 }
 
-
-
-
-
-
-
-
-
-
-
-.carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-      width: 70%;
-      margin: auto;
-  }
+h3 {
+	font-size: 140%;
+}
