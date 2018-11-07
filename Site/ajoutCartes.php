@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+<?php
+	session_start();
+?>
+<!DOCTYPE html>
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
@@ -15,7 +18,7 @@
 				<a href="userHomePage.php"><img id="logo" src="CSS/IMG/logo.png" alt="SmartScanBC"></a>
 			</nav>
 			<nav id="carte">
-				<form action="userHomePage.php" method="POST">
+				<form action="" method="POST">
 					<h1 id="Inscription">Ajout d'une carte de visite</h1>
 					
 					<label><b>Nom de la personne</b></label>
@@ -44,16 +47,40 @@
 					
 					<label><b>Site web</b></label>
 					<input type="text" placeholder="Entrez l'url du site web" name="siteWeb">
-					<!--
-					<label><b>Lieu</b></label>
-					<input type="text" placeholder="Entrer votre lieu d'habitation" name="lieu" required>
 					
-					<label><b>Entreprise</b></label>
-					<input type="text" placeholder="Entrer le nom de votre entreprise" name="entreprise" required> -->
 					
-					<input type="submit" id='submit' value='Ajouter cette carte' >
+					<input type="submit" id='submit' name ="submit" value='Ajouter cette carte' >
 				</form>
 			</nav>
 		</div>
+		<?php
+			if(isset($_POST["submit"])){
+				$servername = "172.17.0.4:3306";
+				$username = "contact";
+				$password = "scan123";
+				$dbname = "smartscan";
+				// Create connection
+				$conn = new mysqli($servername, $username, $password, $dbname);
+				// Check connection
+				if ($conn -> connect_error) {
+				die("Connection failed: " . $conn -> connect_error);
+				}
+				$nom = $_POST["nomPersonnne"];
+				$prenom = $_POST["prénomPersonnne"];
+				$mail = $_POST["email"];
+				$telephone= $_POST["numero"];
+				$adresse = $_POST["adresse"];
+				$ville = $_POST["ville"];
+				$nomEntreprise = $_POST["nomEntreprise"];
+				$actiEntreprise = $_POST["actiEntreprise"];
+				$id_Utilisateur = $_SESSION['id_Utilisateur'];
+				$site = $_POST["siteWeb"];
+					if(mysqli_query($conn,"insert into Contacts(Nom, Prenom, Mail, Telephone, Adresse, Localite, NomSociete,Activite,id_Utilisateur,SiteWeb)
+					values ('$nom','$prenom','$mail','$telephone','$adresse','$ville','$nomEntreprise','$actiEntreprise','$id_Utilisateur','$site')")){
+						echo "<br>carte ajoutée";
+					}
+					
+				}
+		?>
 	</body>
 </html>
