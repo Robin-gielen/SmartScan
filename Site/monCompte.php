@@ -60,4 +60,4 @@
 			</nav>
 		</div>
 	</body>
-</php>
+</html>

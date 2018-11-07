@@ -22,7 +22,7 @@
 			</nav>
 			<nav>
 				<div id="deco">
-					<a">Déconnexion</a>
+					<a>Déconnexion</a>
 				</div>
 			</nav>
 			<nav id="compte">
@@ -52,4 +52,4 @@
 			</nav>
 		</div>
 	</body>
-</php>
+</html>

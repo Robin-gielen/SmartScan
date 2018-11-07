@@ -1,4 +1,4 @@
-﻿<!DOCTYPE php>
+﻿<!DOCTYPE html>
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
@@ -21,7 +21,7 @@
 			</nav>
 			<nav>
 				<div id="deco">
-					<a">Déconnexion</a>
+					<a>Déconnexion</a>
 				</div>
 			</nav>
 			<nav>
@@ -37,4 +37,4 @@
 			</nav>
 		</div>
 </body>
-</php>
+</html>
