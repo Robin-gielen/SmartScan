@@ -1,6 +1,6 @@
 ﻿@font-face {
 	font-family: 'font';
-	src: url('Polices/Elcsa.otf');
+	src: url('Polices/Medel.ttf');
 }
 
 body {
@@ -44,12 +44,15 @@ body {
 }
 
 #blabla {
-	color: black;
-	font-size: 130%;
+	background-color: black;
+	opacity: 0.75;
+	border-radius: 20px;
+	color: white;
 	width: 80%;
 	text-align: center;
 	margin: auto;
-	margin-top: 2%;
+	margin-top: 15%;
+	padding: 2%;
 }
 
 h2{

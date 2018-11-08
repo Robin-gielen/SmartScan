@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "370519862457",
+    "firebase_url": "https://ocr-proj-fcedf.firebaseio.com",
+    "project_id": "ocr-proj-fcedf",
+    "storage_bucket": "ocr-proj-fcedf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:370519862457:android:7f995a9b16fed7b3",
+        "android_client_info": {
+          "package_name": "com.example.gimki.smartscan_dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "370519862457-qctevbvbnqmm8bljmi0b6iieb5so5aia.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXKGBVNjUCZGEsDPo2ARceZTqmFJ7RjrE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

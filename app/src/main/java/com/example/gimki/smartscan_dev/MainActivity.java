@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         camera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dispatchTakePictureIntent();
+                LauchActivityScanne();
             }
         });
 
@@ -128,6 +128,10 @@ public class MainActivity extends AppCompatActivity {
     }
     private void launchActivitySignUp() {
         Intent intent = new Intent(this, SignUp.class);
+        startActivity(intent);
+    }
+    private void LauchActivityScanne() {
+        Intent intent = new Intent(mContext, Scanne.class);
         startActivity(intent);
     }
 

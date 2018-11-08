@@ -7,4 +7,5 @@
     <string name="title_activity_logged">Logged</string>
     <string name="title_activity_manual_entry">manualEntry</string>
     <string name="title_activity_mdp_oublie">mdpOublie</string>
+    <string name="title_activity_scanne">Scanne</string>
 </resources>

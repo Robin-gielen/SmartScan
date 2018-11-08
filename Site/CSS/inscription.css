@@ -1,18 +1,19 @@
 ﻿@font-face {
 	font-family: 'font';
-	src: url('Polices/Elcsa.otf');
+	src: url('Polices/Medel.ttf');
 }
-
 
 body {
 	font-family: font;
 	font-size: 130%;
-	background-image: url(IMG/fond_4.jpg);
+	background-image: url(IMG/fond_4.png);
 	background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100%;
+	height: 100%;
 	color: white;
 	overflow: auto;
+	background-size: cover;
 }
 #h1{
 	text-align: center;
@@ -43,7 +44,7 @@ a {
 	background-color: black;
 	border-radius: 20px;
 	opacity: 0.75;
-    width:650px;
+    width: 730px;
     margin:0 auto;
     margin-top:5%;
 }
@@ -75,125 +76,73 @@ input[type=submit]:hover {
     color: #53af57;
     border: 1px solid #53af57;
 }
-#nom{
-	float: left;
-	display : block;
-	position: relative;
-	top: -20px;
-}
-#prenom{
-	float: left;
-	display : block;
-	position: relative;
-	top: -105px;
-	left: 280px;
-}
-#prenomForm{
-	float:right;
-	position: relative;
-	top: -85px;
+#nom {
+	margin-right: 4%;
 }
 
-#adresse{
-	float: left;
-	display : block;
-	position: relative;
-	top: -70px;
-	left: -20px;
+#nomform{
+	width: 31%;
 }
-#adresseForm{
-	float:left;
-	position: relative;
-	top: -50px;
-	left: -20px;
+
+#prenom{
+	float: right;
+}
+
+#prenomform {
+	width: 67%;
+}
+#adresseform{
+	width: 30.5%;
 }
 
 #ville{
-	float: left;
-	display : block;
-	position: relative;
-	top: -115px;
-	left: 5px;
-}
-#villeForm{
-	float:right;
-	position: relative;
-	top: -97px;
-	left: 2px;
+	float: right;
 }
 
-#email{
-	float: left;
-	display : block;
-	position: relative;
-	top: -70px;
-	left: -10px;
+#villeform{
+	width: 76%;
 }
-#emailForm{
-	float:left;
-	position: relative;
-	top: -50px;
-	left: -10px;
+
+#mail{
+	margin-right: 3%;
+}
+
+#emailform{
+	width: 31%;
 }
 #pseudo{
-	float: left;
-	display : block;
-	position: relative;
-	top: -120px;
-	left: 15px;
+	float: right;
 }
-#pseudoForm{
-	float:right;
-	position: relative;
-	top: -95px;
+#pseudoform{
+	width: 68%;
 }
 
 #mdp{
-	float: left;
-	display : block;
-	position: relative;
-	top: -70px;
-	left: -2px;
+	margin-right: 4%;
 }
+
 #mdpForm{
-	float:left;
-	position: relative;
-	top: -50px;
-	left: 5px;
+	width: 31%;
 }
 #conf{
+	float: right;
+}
+#confform{
+	width: 62%;
+}
+
+
+#checkbox {
 	float: left;
-	display : block;
-	position: relative;
-	top: -120px;
-	left: 25px;
-}
-#confForm{
-	float:left;
-	position: relative;
-	top: -97px;
-	left: 20px;
-}
-#check{
-	float:left;
-	position: relative;
-	top: -50px;
-	left: 150px;
-}
-#checkForm{
-	float:left;
-	position: relative;
-	top: 15px;
-	left: -420px;
+	margin-right: 5%;
+	margin-left: 12%;
 }
 
 form {
     width:85%;
     padding: 30px;
 }
-#titre{
-	font-size: 50px;
-}
+
 #inscription{
 	text-align:center;
 }
