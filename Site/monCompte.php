@@ -23,10 +23,10 @@
 	<body>
 		<div id="header">
 			<nav>
-				<a href="userHomePage.php"><img id="smartscanbc" src="CSS/IMG/smartscanbc.png" alt="SmartScanBC"></a>
+				<a href="index.php"><img id="smartscanbc" src="CSS/IMG/smartscanbc.png" alt="SmartScanBC"></a>
 			</nav>	
 			<nav>
-				<a href="userHomePage.php"><img id="logo" src="CSS/IMG/logo.png" alt="SmartScanBC"></a>
+				<a href="index.php"><img id="logo" src="CSS/IMG/logo.png" alt="SmartScanBC"></a>
 			</nav>
 			<nav>
 				<div id="supprimer">
