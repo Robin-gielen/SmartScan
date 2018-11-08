@@ -44,7 +44,7 @@ a {
 	background-color: black;
 	border-radius: 20px;
 	opacity: 0.75;
-    width: 65%;
+    width: 730px;
     margin:0 auto;
     margin-top:5%;
 }
@@ -92,7 +92,7 @@ input[type=submit]:hover {
 	width: 67%;
 }
 #adresseform{
-	width: 31%;
+	width: 30.5%;
 }
 
 #ville{
