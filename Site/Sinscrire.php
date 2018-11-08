@@ -16,7 +16,7 @@
 				<div id="prenom">
 				<label>Prénom</label>
 				<input id="prenomform" type="text" name="cli_firstname" placeholder="Entrez votre prénom" required="required" placeholder="Please Enter Firstname">
-				</div id="prenom">
+				</div>
 				<p></p>
 
 				<label id="adresse">Adresse</label>
@@ -28,7 +28,7 @@
 				</div>
 				<p></p>
 				
-				<label>Email</label>
+				<label id="mail">Email</label>
 				<input id="emailform" type="text" name="cli_mail" placeholder="Entrez l'adresse email" required="required" placeholder="Please Your E-mail">
 				
 				<div id="pseudo">
@@ -37,7 +37,7 @@
 				</div>
 				<p></p>
 				
-				<label>mdp</label>
+				<label id="mdp">mdp</label>
 				<input id="mdpform" type="password" name="cli_password" placeholder="Entrez un mot de passe" required="required" placeholder="Please Enter Password">
 				
 				<div id="conf">

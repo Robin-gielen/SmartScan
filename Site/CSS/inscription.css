@@ -44,7 +44,7 @@ a {
 	background-color: black;
 	border-radius: 20px;
 	opacity: 0.75;
-    width:85%;
+    width: 65%;
     margin:0 auto;
     margin-top:5%;
 }
@@ -76,9 +76,12 @@ input[type=submit]:hover {
     color: #53af57;
     border: 1px solid #53af57;
 }
+#nom {
+	margin-right: 4%;
+}
 
 #nomform{
-	width: 35%;
+	width: 31%;
 }
 
 #prenom{
@@ -89,7 +92,7 @@ input[type=submit]:hover {
 	width: 67%;
 }
 #adresseform{
-	width: 29.5%;
+	width: 31%;
 }
 
 #ville{
@@ -100,8 +103,12 @@ input[type=submit]:hover {
 	width: 76%;
 }
 
+#mail{
+	margin-right: 3%;
+}
+
 #emailform{
-	width: 34%;
+	width: 31%;
 }
 #pseudo{
 	float: right;
@@ -110,8 +117,12 @@ input[type=submit]:hover {
 	width: 68%;
 }
 
+#mdp{
+	margin-right: 4%;
+}
+
 #mdpForm{
-	width: 35%;
+	width: 31%;
 }
 #conf{
 	float: right;
@@ -123,7 +134,8 @@ input[type=submit]:hover {
 
 #checkbox {
 	float: left;
-	margin-right: 7%;
+	margin-right: 5%;
+	margin-left: 12%;
 }
 
 form {
