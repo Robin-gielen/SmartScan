@@ -28,8 +28,9 @@ echo"<!DOCTYPE html>
 			
 			<nav id = 'connexion'>
 					<a href='SeConnecter.php'>Se connecter</a>
-					<br>
-					<a href='Sinscrire.php'>S'inscrire</a>
+			</nav>
+			<nav id ='inscription'>
+				<a href='Sinscrire.php'>S'inscrire</a>
 			</nav>
 			";
 			if($_SESSION['message'] != ''){
