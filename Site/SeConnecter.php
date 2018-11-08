@@ -47,16 +47,6 @@ alert("Not Connected"); // this is the message in ""
 				if ($conn->connect_error) {
 				die("Connection failed: " . $conn->connect_error);
 				}
-<<<<<<< HEAD
-				if (isset($_POST["cli_username"]) && isset($_POST["cli_password"])){
-				$cli_username = $_POST["cli_username"];
-				$cli_password = $_POST["cli_password"];
-					/*$query=mysqli_query($conn,"select password from Utilisateurs where username ='$cli_username'";)
-						if(mysqli_num_rows($query)>0){
-							echo 'Connected';
-						}*/
-					
-=======
 					$cli_username = $conn->escape_string($_POST['cli_username']);
 					$cli_password =$conn->escape_string($_POST['cli_password']);
 					$_SESSION['pseudo']=$cli_username;
@@ -87,9 +77,7 @@ alert("Not Connected"); // this is the message in ""
 							header("Location: SeConnecter.php");die;
 						}
 					}
->>>>>>> 1f649e35b96d790a5d9e1611012aacacdbfce9a5
 				}
-			}
 				
 				
 		?>

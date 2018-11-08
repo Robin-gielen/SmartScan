@@ -146,3 +146,8 @@ form {
 #inscription{
 	text-align:center;
 }
+#logoCond{
+	width: 10%;
+	height : 26%;
+	float: left;
+}
