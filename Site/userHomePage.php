@@ -98,12 +98,21 @@ if(isset($_SESSION['pseudo'])) {
 					<a href='ajoutCartes.php'>Ajouter une carte</a>
 				</div>
 			</nav>
+			<nav>
+				<div id='supprCarte'>
+					<a href='ajoutCartes.html'>Supprimer une/des carte(s)</a>
+				</div>
+			</nav>
 			<nav id='groupe'>
 			</nav>
 			<nav id='cartes'>
 				.$table.
 			</nav>
 			<nav id='tri'>
+				<select>
+					<option>Ordre chronologique</option>
+					<option>Ordre alphabétique</option>
+				</select>
 			</nav>
 		</div>
 </body>
