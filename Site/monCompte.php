@@ -30,7 +30,7 @@
 			</nav>
 			<nav>
 				<div id="supprimer">
-					<a>Supprimer mon comtpe</a>
+					<a>Supprimer mon compte</a>
 				</div>
 			</nav>
 			<nav>

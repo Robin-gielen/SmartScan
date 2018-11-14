@@ -43,10 +43,8 @@ body {
 	background-color: black;
 	opacity: 0.75;
 	border-radius: 4%;
-	position: relative;
-	right: -22%;
-	bottom: -150px;
 	height : 110%;
+	margin: 12% 10% 10% 22%;
 }
 #deco{
 	width:5%;

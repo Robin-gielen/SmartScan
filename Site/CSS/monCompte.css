@@ -43,9 +43,7 @@ body {
 	background-color: black;
 	opacity: 0.75;
 	border-radius: 4%;
-	position: relative;
-	right: -22%;
-	bottom: -150px;
+	margin: 12% 10% 10% 22%;
 	height : 110%;
 }
 
@@ -83,7 +81,8 @@ form {
 #supprimer{
 	width:5%;
     padding: 1%;
-    background-color: red;
+    background-color: black;
+	color: red;
 	border-radius: 20%;
 	opacity: 0.50;
 	float : right;
@@ -103,6 +102,10 @@ form {
 	right: 1%;
 	top: 15%;
 	text-align: center;
+}
+a {
+	color: white;
+	/**margin-top: 2%;**/
 }
 ::-webkit-scrollbar {
     width: 0.7%;
