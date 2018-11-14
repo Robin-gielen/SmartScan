@@ -37,18 +37,19 @@ echo"<!DOCTYPE html>
 			
 			
 			if($_SESSION['logged_in'] == true){
-			echo"<nav>
+			echo"
+			<nav>
+				<div id='deco'>
+					<a href='?hello=true''>Deconnexion</a>
+				</div>
+			</nav>
+			<nav>
 				<div id='mesCartes'>
 					<a href='userHomePage.php'>Mes Cartes</a>
 				</div>
 			</nav>";
 	}
 	echo"
-			<nav>
-				<div id='deco'>
-					<a href='?hello=true''>Deconnexion</a>
-				</div>
-			</nav>
 			
 		</div>	
 		
@@ -98,4 +99,14 @@ echo"<!DOCTYPE html>
 		</div>
 </body>
 </html>";
+if (isset($_GET['hello'])) {
+											//remove PHPSESSID from browser
+											if ( isset( $_COOKIE[session_name()] ) )
+											setcookie( session_name(), “”, time()-3600, “/” );
+											//clear session from globals
+											$_SESSION = array();
+											//clear session from disk
+											session_destroy();
+											header("Location: http://www.smartscan-bc.ovh");
+										  }
 ?>
