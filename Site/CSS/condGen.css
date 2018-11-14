@@ -33,14 +33,13 @@ body {
 	float: left;
 }
 #condGen{
-	float: left;
-	width: 99%;
+	width: 95%;
 	background-color: black;
 	opacity: 0.75;
 	border-radius: 20px;
 	height : 12%;
-	margin: 1%;
-	margin-top: 2%;
+	margin: 5% auto 2% auto;
+	padding: 0.7%;
 }
 
 #blabla {
@@ -48,10 +47,10 @@ body {
 	opacity: 0.75;
 	border-radius: 20px;
 	color: white;
-	width: 80%;
+	width: 91%;
 	text-align: center;
 	margin: auto;
-	margin-top: 15%;
+	margin-top: 3%;
 	padding: 2%;
 }
 
