@@ -2,6 +2,7 @@
 
 <?php
  session_start();
+ 
 if(isset($_SESSION['pseudo'])) {
 				$servername = "172.17.0.4:3306";
 				$username = "compte";
@@ -27,7 +28,13 @@ if(isset($_SESSION['pseudo'])) {
 							$username2 = "show";
 							$password2 = "vue123";
 							$conn2 = new mysqli($servername, $username2, $password2, $dbname);
-							$result2 =$conn2->query("select * from Contacts where id_Utilisateur ='$id_Utilisateur'")or die($mysqli->error());
+							$result2 =$conn2->query("select * from Contacts where id_Utilisateur ='$id_Utilisateur' order by id_Contact")or die($mysqli->error());
+							if($_POST['tri']=='alpha'){
+							$result2 =$conn2->query("select * from Contacts where id_Utilisateur ='$id_Utilisateur' order by NomSociete")or die($mysqli->error());
+							}
+							if($_POST['tri']=='chrono'){
+							$result2 =$conn2->query("select * from Contacts where id_Utilisateur ='$id_Utilisateur' order by id_Contact")or die($mysqli->error());
+							}
 							if( $result->num_rows == 0){
 								$_SESSION['message']= "You don't have save any BC";
 								print $_SESSION['message'];
@@ -109,9 +116,9 @@ if(isset($_SESSION['pseudo'])) {
 				$table
 			</nav>
 			<nav id='tri'>
-				<select>
-					<option>Ordre chronologique</option>
-					<option>Ordre alphabétique</option>
+				<select name ='tri'>
+					<option value ='chrono'>Ordre chronologique</option>
+					<option value='alpha'>Ordre alphabétique</option>
 				</select>
 			</nav>
 		</div>
