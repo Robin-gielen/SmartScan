@@ -13,7 +13,7 @@ echo"<!DOCTYPE html>
 		<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
 		<link rel='icon' type='image/png' href='CSS/IMG/logo.png'/>
 		<title>SmartScanBC</title>
-		<link rel='stylesheet'' href='CSS/accueil.css'>
+		<link rel='stylesheet' href='CSS/accueil.css'>
 	</head>
 	<body>
 		<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
@@ -38,16 +38,12 @@ echo"<!DOCTYPE html>
 			
 			if($_SESSION['logged_in'] == true){
 			echo"
-			<nav>
 				<div id='deco'>
-					<a href='?hello=true''>Deconnexion</a>
+					<a href='?hello=true'>Deconnexion</a>
 				</div>
-			</nav>
-			<nav>
 				<div id='mesCartes'>
 					<a href='userHomePage.php'>Mes Cartes</a>
-				</div>
-			</nav>";
+				</div>";
 	}
 	echo"
 			

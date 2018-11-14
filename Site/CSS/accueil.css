@@ -73,7 +73,8 @@ body {
 	font-size: 1.3vw;
 }
 #mesCartes{
-	width:10%;
+	font-size: 1.3vw;
+	width: 10%;
     padding: 1%;
     background-color: black;
 	border-radius: 20px;
@@ -83,7 +84,6 @@ body {
 	right: 2%;
 	top: 20.5%;
 	text-align: center;
-	font-size: 180%;
 }
 
 #content {
