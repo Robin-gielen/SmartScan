@@ -1,4 +1,4 @@
-﻿<html>
+<html>
     <head>
        <meta charset="utf-8">
 		<title>Inscription</title>
@@ -76,6 +76,7 @@
 					if(mysqli_query($conn,"insert into Utilisateurs(Nom, Prenom, Adresse, Mail, Localite, pseudo, password)
 					values ('$name','$firstname','$address','$mail','$city','$username','$password')")){
 						echo "<br>Inscription réussie";
+						header("Location: http://www.smartscan-bc.ovh");
 					}
 					else{
 						echo "<br>Il existe déjà un compte lié à cet E-mail";

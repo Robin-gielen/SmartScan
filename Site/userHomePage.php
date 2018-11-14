@@ -106,7 +106,7 @@ if(isset($_SESSION['pseudo'])) {
 			<nav id='groupe'>
 			</nav>
 			<nav id='cartes'>
-				.$table.
+				$table
 			</nav>
 			<nav id='tri'>
 				<select>

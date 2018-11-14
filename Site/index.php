@@ -25,15 +25,18 @@ echo"<!DOCTYPE html>
 			<nav>
 				<img id='smartscanbc' src='CSS/IMG/smartscanbc.png' alt='SmartScanBC'>
 			</nav>
-			
-			<nav id = 'connexion'>
+			";
+			if($_SESSION['logged_in'] == false){
+			echo"<nav id = 'connexion'>
 					<a href='SeConnecter.php'>Se connecter</a>
 			</nav>
 			<nav id ='inscription'>
 				<a href='Sinscrire.php'>S'inscrire</a>
-			</nav>
-			";
-			if($_SESSION['message'] != ''){
+			</nav>";
+	}
+			
+			
+			if($_SESSION['logged_in'] == true){
 			echo"<nav>
 				<div id='mesCartes'>
 					<a href='userHomePage.php'>Mes Cartes</a>
