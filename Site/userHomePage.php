@@ -119,6 +119,7 @@ if(isset($_SESSION['pseudo'])) {
 				<select name ='tri'>
 					<option value ='chrono'>Ordre chronologique</option>
 					<option value='alpha'>Ordre alphabétique</option>
+					<button type='button'>Confirmer</button>
 				</select>
 			</nav>
 		</div>
