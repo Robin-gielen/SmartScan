@@ -4,6 +4,15 @@
 		<title>Inscription</title>
         <link rel="stylesheet" href="CSS/inscription.css" media="screen" type="text/css" />
 		<link rel="icon" type="image/png" href="CSS/IMG/logo.png"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script>
+			$('#password, #confform').on('keyup', function () {
+				  if ($('#mdpform').val() == $('#confform').val()) {
+				    $('#message').html('Matching').css('color', 'green');
+				  } else 
+				    $('#message').html('Not Matching').css('color', 'red');
+				});
+		</script>
     </head>
     <body>
 		<div>
@@ -48,6 +57,7 @@
                 <input id="confform" type="password" placeholder="Ré-entrez le mot de passe" name="passwordConf" required>
 				</div>
 				<p></p>
+				<span id='message'></span>
 				
 				<input id="checkbox" type="checkbox" name="confirmer" required>
 				<label><b>Je suis d'accord avec les conditions d'utilisation</b></label>
