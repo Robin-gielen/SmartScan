@@ -18,6 +18,7 @@
 		<div>
 			<nav id="condGen">
 				<h2>Foire aux questions</h2>
+				
 			</nav>
 		</div>
 </body>
