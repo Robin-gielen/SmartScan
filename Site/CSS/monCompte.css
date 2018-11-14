@@ -19,31 +19,49 @@ body {
 
 #smartscanbc {
 	width: 50%;
-	position: absolute;
-	top: 2%;
-	padding: auto;
-	margin: auto;
-	left: 25%;
-	display : inline;
+	margin-top: 1%;
+	margin-left: 16%;
 }
 
 #logo{
 	width: 8%;
 	height : 26%;
-	position: static;
 	margin-top: 1%;
-	left: 20%;
+	margin-left: 1%;
 	float: left;
-	display: inline-block;
+}
+
+#supprimer{
+	width:7%;
+    padding: 1%;
+    background-color: black;
+	color: red;
+	border-radius: 20%;
+	opacity: 0.50;
+	float : right;
+	margin-right: 1%;
+	margin-top: 1%;
+	text-align: center;
+	font-size: 1.3vw;
+}
+#deco{
+	width:7%;
+    padding: 1%;
+    background-color: black;
+	border-radius: 20%;
+	opacity: 0.75;
+	float : right;
+	margin-right: 1%;
+	text-align: center;
+	font-size: 1.3vw;
 }
 
 #compte{
-	float: left;
 	width: 40%;
 	background-color: black;
 	opacity: 0.75;
 	border-radius: 4%;
-	margin: 12% 10% 10% 22%;
+	margin: 4% auto 4% auto;
 	height : 110%;
 }
 
@@ -78,31 +96,6 @@ form {
     box-shadow: 0 0 20% 0 rgba(0, 0, 0, 0.2), 0 5% 5% 0 rgba(0, 0, 0, 0.24);
 }
 
-#supprimer{
-	width:5%;
-    padding: 1%;
-    background-color: black;
-	color: red;
-	border-radius: 20%;
-	opacity: 0.50;
-	float : right;
-	position: absolute;
-	right: 1%;
-	top: 1%;
-	text-align: center;
-}
-#deco{
-	width:5%;
-    padding: 1%;
-    background-color: black;
-	border-radius: 20%;
-	opacity: 0.75;
-	float : right;
-	position: absolute;
-	right: 1%;
-	top: 15%;
-	text-align: center;
-}
 a {
 	color: white;
 	/**margin-top: 2%;**/

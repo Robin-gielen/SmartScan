@@ -22,22 +22,15 @@
 	</head>
 	<body>
 		<div id="header">
-			<nav>
-				<a href="index.php"><img id="smartscanbc" src="CSS/IMG/smartscanbc.png" alt="SmartScanBC"></a>
-			</nav>	
-			<nav>
-				<a href="index.php"><img id="logo" src="CSS/IMG/logo.png" alt="SmartScanBC"></a>
-			</nav>
-			<nav>
-				<div id="supprimer">
-					<a>Supprimer mon compte</a>
-				</div>
-			</nav>
-			<nav>
-				<div id="deco">
-					<a href='?hello=true''>Déconnexion</a>
-				</div>
-			</nav>
+			<a href="index.php"><img id="smartscanbc" src="CSS/IMG/smartscanbc.png" alt="SmartScanBC"></a>	
+			<a href="index.php"><img id="logo" src="CSS/IMG/logo.png" alt="SmartScanBC"></a>
+			<div id="supprimer">
+				<a>Supprimer mon compte</a>
+			</div>
+			<p></p>
+			<div id="deco">
+				<a href='?hello=true'>Déconnexion</a>
+			</div>
 			<nav id="compte">
 				<form action="userHomePage.php" method="POST">
 					<h1 id="Inscription">Modification de votre profil</h1>
