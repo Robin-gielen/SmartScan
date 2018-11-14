@@ -11,51 +11,47 @@
 	</head>
 	<body>
 		<div id="header">
-			<nav>
 				<a href="index.php"><img id="smartscanbc" src="CSS/IMG/smartscanbc.png" alt="SmartScanBC"></a>
-			</nav>	
-			<nav>
 				<a href="index.php"><img id="logo" src="CSS/IMG/logo.png" alt="SmartScanBC"></a>
-			</nav>
-			<nav id="carte">
-				<form action="" method="POST">
-					<h1 id="Inscription">Ajout d'une carte de visite</h1>
-					
-					<label><b>Nom de la personne</b></label>
-					<input type="text" placeholder="Entrez le nom de la personne" name="nomPersonnne" required>
-					
-					<label><b>Prénom de la personne</b></label>
-					<input type="text" placeholder="Entrez le prénnom de la personne" name="prénomPersonnne" required>
-					
-					<label><b>Adresse Email</b></label>
-					<input type="email" placeholder="Entrez l'adresse email" name="email" required>
-					
-					<label><b>Numéro de telephone</b></label>
-					<input type="text" placeholder="Entrez le numéro de telephone" name="numero" required>
-					
-					<label><b>Adresse</b></label>
-					<input type="text" placeholder="Entrez l'adresse" name="adresse">
-					
-					<label><b>Ville</b></label><br>
-					<input type="text" placeholder="Entrez la ville" name="ville">
-					
-					<label><b>Nom de l'entreprise</b></label>
-					<input type="text" placeholder="Entrez le nom de l'entreprise" name="nomEntreprise" required>
-					
-					<label><b>Activité</b></label>
-					<input type="text" placeholder="Entrez l'activite de l'entreprise" name="actiEntreprise" required>
-					
-					<label><b>Site web</b></label>
-					<input type="text" placeholder="Entrez l'url du site web" name="siteWeb">
-					
-					<label><b>Catégorie</b></label>
-					<input type="text" placeholder="Entrez un nom de catégorie" name="cat">
-					
-					
-					<input type="submit" id='submit' name ="submit" value='Ajouter cette carte' >
-				</form>
-			</nav>
 		</div>
+		<nav id="carte">
+			<form action="" method="POST">
+				<h1 id="Inscription">Ajout d'une carte de visite</h1>
+				
+				<label><b>Nom de la personne</b></label>
+				<input type="text" placeholder="Entrez le nom de la personne" name="nomPersonnne" required>
+				
+				<label><b>Prénom de la personne</b></label>
+				<input type="text" placeholder="Entrez le prénnom de la personne" name="prénomPersonnne" required>
+				
+				<label><b>Adresse Email</b></label>
+				<input type="email" placeholder="Entrez l'adresse email" name="email" required>
+				
+				<label><b>Numéro de telephone</b></label>
+				<input type="text" placeholder="Entrez le numéro de telephone" name="numero" required>
+				
+				<label><b>Adresse</b></label>
+				<input type="text" placeholder="Entrez l'adresse" name="adresse">
+				
+				<label><b>Ville</b></label><br>
+				<input type="text" placeholder="Entrez la ville" name="ville">
+				
+				<label><b>Nom de l'entreprise</b></label>
+				<input type="text" placeholder="Entrez le nom de l'entreprise" name="nomEntreprise" required>
+				
+				<label><b>Activité</b></label>
+				<input type="text" placeholder="Entrez l'activite de l'entreprise" name="actiEntreprise" required>
+				
+				<label><b>Site web</b></label>
+				<input type="text" placeholder="Entrez l'url du site web" name="siteWeb">
+				
+				<label><b>Catégorie</b></label>
+				<input type="text" placeholder="Entrez un nom de catégorie" name="cat">
+				
+				
+				<input type="submit" id='submit' name ="submit" value='Ajouter cette carte' >
+			</form>
+		</nav>
 		<?php
 			if(isset($_POST["submit"])){
 				$servername = "172.17.0.4:3306";
