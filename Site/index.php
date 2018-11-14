@@ -41,6 +41,11 @@ echo"<!DOCTYPE html>
 			</nav>";
 	}
 	echo"
+			<nav>
+				<div id='deco'>
+					<a href='?hello=true''>Deconnexion</a>
+				</div>
+			</nav>
 			
 		</div>	
 		

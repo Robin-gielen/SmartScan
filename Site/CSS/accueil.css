@@ -274,6 +274,22 @@ form {
 	margin-top: -8%;
 	margin-left: 1%;
 }
+#deco{
+	float: right;
+	width:10%;
+	margin: 1%;
+    padding: 1%;
+    background-color: black;
+	border-radius: 20px;
+	opacity: 0.75;
+	float : right;
+	text-align: center;
+	font-size: 180%;
+	position: absolute;
+	top: 10%;
+	right: 1%;
+	font-size: 1.3vw;
+}
 ::-webkit-scrollbar {
     width: 10px;
 }
