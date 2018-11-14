@@ -15,9 +15,7 @@
 		</script>
     </head>
     <body>
-		<div>
-				<a href="index.php"><img id="logoCond" src="CSS/IMG/logo.png" alt="SmartScanBC"></a>
-		</div>
+		<a href="index.php"><img id="logoCond" src="CSS/IMG/logo.png" alt="SmartScanBC"></a>
 		<div id="container2">    
             <form action="" method="POST">
                 <h1 id="Inscription">Inscription</h1>
@@ -94,3 +92,4 @@
 				}
 		?>
     </body>
+</html>

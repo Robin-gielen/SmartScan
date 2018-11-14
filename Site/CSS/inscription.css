@@ -45,8 +45,13 @@ a {
 	border-radius: 20px;
 	opacity: 0.75;
     width: 730px;
-    margin:0 auto;
-    margin-top:5%;
+    margin: 5% auto 5% auto;
+}
+
+#logoCond{
+	width: 10%;
+	float: left;
+	margin: -4% 1% 0 0;
 }
 
 input[type=text], input[type=password] {
@@ -145,9 +150,4 @@ form {
 
 #inscription{
 	text-align:center;
-}
-#logoCond{
-	width: 10%;
-	height : 26%;
-	float: left;
 }
