@@ -48,6 +48,9 @@
 					<label><b>Site web</b></label>
 					<input type="text" placeholder="Entrez l'url du site web" name="siteWeb">
 					
+					<label><b>Catégorie</b></label>
+					<input type="text" placeholder="Entrez un nom de catégorie" name="cat">
+					
 					
 					<input type="submit" id='submit' name ="submit" value='Ajouter cette carte' >
 				</form>
@@ -75,8 +78,9 @@
 				$actiEntreprise = $_POST["actiEntreprise"];
 				$id_Utilisateur = $_SESSION['id_Utilisateur'];
 				$site = $_POST["siteWeb"];
-					if(mysqli_query($conn,"insert into Contacts(Nom, Prenom, Mail, Telephone, Adresse, Localite, NomSociete,Activite,id_Utilisateur,SiteWeb)
-					values ('$nom','$prenom','$mail','$telephone','$adresse','$ville','$nomEntreprise','$actiEntreprise','$id_Utilisateur','$site')")){
+				$cat = $_POST["cat"];
+					if(mysqli_query($conn,"insert into Contacts(Nom, Prenom, Mail, Telephone, Adresse, Localite, NomSociete,Activite,id_Utilisateur,SiteWeb, Cat)
+					values ('$nom','$prenom','$mail','$telephone','$adresse','$ville','$nomEntreprise','$actiEntreprise','$id_Utilisateur','$site','$cat')")){
 						echo "<br>carte ajoutée";
 					}
 					

@@ -60,12 +60,15 @@ alert("Not Connected"); // this is the message in ""
 						header("Location: SeConnecter.php");
 					}
 					else{
-						print "test";
 						$user =$result->fetch_assoc();
-						print "test2";
+
 						if($cli_password === $user['password']){
 							$_SESSION['pseudo'] = $cli_username;
 							$_SESSION['password'] = $cli_password;
+							$_SESSION['mail'] = $user['Mail'];
+							$_SESSION['nom']=$user['Nom'];
+							$_SESSION['prenom']=$user['Prenom'];
+							$_SESSION['localite']=$user['Localite'];
 							$_SESSION['logged_in'] = true;
 							$_SESSION['message'] = "You are connected!";
 							print $_SESSION['message'];
