@@ -148,6 +148,16 @@ button{
 	background-color: black;
 	color: white;
 }
+#ajouter{
+	height: 8%;
+	margin: -8% 10% 10% 37%;
+}
+#addGroupe{
+	margin: 10% 10% 10% 20%;
+}
+hr{
+	margin-top: -5%;
+}
 ::-webkit-scrollbar {
     width: 10px;
 }

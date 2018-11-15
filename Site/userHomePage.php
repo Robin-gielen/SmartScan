@@ -110,6 +110,9 @@ if(isset($_SESSION['pseudo'])) {
 					</div>
 				</nav>
 				<nav id='groupe'>
+					<p id='addGroupe'>Ajouter un groupe</p>
+					<img id='ajouter' src='CSS/IMG/ajouter4.png' alt='SmartScanBC'>
+					<hr>
 				</nav>
 				<nav id='cartes'>
 					$table
@@ -197,6 +200,9 @@ if(isset($_SESSION['pseudo'])) {
 					</div>
 				</nav>
 				<nav id='groupe'>
+					<p id='addGroupe'>Ajouter un groupe</p>
+					<img id='ajouter' src='CSS/IMG/ajouter4.png' alt='SmartScanBC'>
+					<hr>
 				</nav>
 				<nav id='cartes'>
 					$table
@@ -291,6 +297,9 @@ if(isset($_SESSION['pseudo'])) {
 					</div>
 				</nav>
 				<nav id='groupe'>
+					<p id='addGroupe'>Ajouter un groupe</p>
+					<img id='ajouter' src='CSS/IMG/ajouter4.png' alt='SmartScanBC'>
+					<hr>
 				</nav>
 				<nav id='cartes'>
 					$table
