@@ -1,6 +1,6 @@
 ﻿@font-face {
 	font-family: 'font';
-	src: url('Polices/Elcsa.otf');
+	src: url('Polices/Medel.ttf');
 }
 
 
@@ -13,10 +13,9 @@ body {
     background-size: 100%;
 	color: white;
 	overflow: auto;
-	height : 1000%;
+	height : 100%;
 	background-size: cover;
 	margin: 0;
-	height: 100%;
 }
 #h1{
 	text-align: center;
@@ -31,23 +30,14 @@ body {
 
 #smartscanbc {
 	width: 55%;
-	position: absolute;
-	top: 2%;
-	padding: auto;
-	margin: auto;
-	left: 23%;
-	display : inline;
+	margin: 1% 16% 0 0;
 }
 
 #logo{
 	width: 8%;
-	height : 26%;
-	position: static;
 	margin-top: 1%;
-	margin-left: 2%;
-	left: 20%;
+	margin-left: 1%;
 	float: left;
-	display: inline-block:
 }
 #compte{
 	width:5%;
