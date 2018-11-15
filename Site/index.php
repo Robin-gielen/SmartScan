@@ -92,6 +92,7 @@ echo"<!DOCTYPE html>
 				<a href='' id='donnees'>A propos de vos donnees</a>
 				<a href='https://www.facebook.com/SmartScanBC/'><img id='fcb' src='CSS/IMG/fcb.png' alt='Facebook'></a>
 				<a href='https://twitter.com/SmartScanBC'><img id='twitter' src='CSS/IMG/Twitter.png' alt='Twitter'></a>
+				<p id='langue'>Langue</p>
 		</div>
 </body>
 </html>";
