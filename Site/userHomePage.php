@@ -79,56 +79,56 @@ if(isset($_SESSION['pseudo'])) {
 			<title>SmartScanBC</title>
 			<link rel='stylesheet' href='CSS/userHomePage.css'>
 			<link rel='icon' type='image/png' href='CSS/IMG/logo.png'/>
-			
 		</head>
 		<body>
 			<div id='header'>
-				<nav>
-					<a href='index.php'><img id='smartscanbc' src='CSS/IMG/smartscanbc.png' alt='SmartScanBC'></a>
-				</nav>	
-				<nav>
-					<a href='index.php'><img id='logo' src='CSS/IMG/logo.png' alt='SmartScanBC'></a>
-				</nav>
-				<nav>
-					<div id='compte'>
-						<a href='compte.php'>Mon compte</a>
+				<a href='index.php'><img id='logo' src='CSS/IMG/logo.png' alt='SmartScanBC'></a>
+				<a href='index.php'><img id='smartscanbc' src='CSS/IMG/smartscanbc.png' alt='SmartScanBC'></a>
+				<div id='compte'>
+					<a href='compte.php'>Mon compte</a>
+				</div>
+				<div id='deco'>
+					<a href='?hello=true'>Déconnexion</a>
+				</div>
+			</div>
+			
+			
+			<div id='content'>
+			
+				<div id='left'>
+					<nav id='groupe'>
+						<img id='addGroup' src='CSS/IMG/ajouter4.png' alt='SmartScanBC'>
+					</nav>
+				</div>
+				
+				
+				<div id='center'>
+					<div id='tri'>
+						<form method = 'POST'>
+							<select name ='tri'>
+								<option value ='chrono' >Ordre chronologique</option>
+								<option value='alpha' selected='selected'>Ordre alphabétique</option>
+							</select>
+							<input id='button' type='submit' name = 'conf'></button>
+							<input id='rech' type="search" placeholder="Entrez votre recherche" name="q" />
+						</form>
 					</div>
-				</nav>
-				<nav>
-					<div id='deco'>
-						<a href='?hello=true''>Déconnexion</a>
-					</div>
-				</nav>
-				<nav>
+					
 					<div id='ajoutCarte'>
 						<a href='ajoutCartes.php'>Ajouter une carte</a>
 					</div>
-				</nav>
-				<nav>
+					
 					<div id='supprCarte'>
 						<a href='ajoutCartes.html'>Supprimer une/des carte(s)</a>
 					</div>
-				</nav>
-				<nav id='groupe'>
-					<p id='addGroupe'>Ajouter un groupe</p>
-					<img id='ajouter' src='CSS/IMG/ajouter4.png' alt='SmartScanBC'>
-					<hr>
-				</nav>
-				<nav id='cartes'>
-					$table
-				</nav>
-				<nav id='tri'>
-					<form method = 'POST'>
-					<select name ='tri'>
-						<option value ='chrono' >Ordre chronologique</option>
-						<option value='alpha' selected='selected'>Ordre alphabétique</option>
-					</select>
-					<input type='submit' name = 'conf'></button>
-					</form>
-				</nav>
+			
+					<nav id='cartes'>
+						$table
+					</nav>
+				</div>
 			</div>
 	</body>
-	</html>";
+</html>";
 									}
 									if($_POST['tri']=='chrono'){
 									$result2 =$conn2->query("select * from Contacts where id_Utilisateur ='$id_Utilisateur' order by id_Contact")or die($mysqli->error());
@@ -169,56 +169,56 @@ if(isset($_SESSION['pseudo'])) {
 			<title>SmartScanBC</title>
 			<link rel='stylesheet' href='CSS/userHomePage.css'>
 			<link rel='icon' type='image/png' href='CSS/IMG/logo.png'/>
-			
 		</head>
 		<body>
 			<div id='header'>
-				<nav>
-					<a href='index.php'><img id='smartscanbc' src='CSS/IMG/smartscanbc.png' alt='SmartScanBC'></a>
-				</nav>	
-				<nav>
-					<a href='index.php'><img id='logo' src='CSS/IMG/logo.png' alt='SmartScanBC'></a>
-				</nav>
-				<nav>
-					<div id='compte'>
-						<a href='compte.php'>Mon compte</a>
+				<a href='index.php'><img id='logo' src='CSS/IMG/logo.png' alt='SmartScanBC'></a>
+				<a href='index.php'><img id='smartscanbc' src='CSS/IMG/smartscanbc.png' alt='SmartScanBC'></a>
+				<div id='compte'>
+					<a href='compte.php'>Mon compte</a>
+				</div>
+				<div id='deco'>
+					<a href='?hello=true'>Déconnexion</a>
+				</div>
+			</div>
+			
+			
+			<div id='content'>
+			
+				<div id='left'>
+					<nav id='groupe'>
+						<img id='addGroup' src='CSS/IMG/ajouter4.png' alt='SmartScanBC'>
+					</nav>
+				</div>
+				
+				
+				<div id='center'>
+					<div id='tri'>
+						<form method = 'POST'>
+							<select name ='tri'>
+								<option value ='chrono' selected='selected'>Ordre chronologique</option>
+								<option value='alpha'>Ordre alphabétique</option>
+							</select>
+							<input id='button' type='submit' name = 'conf'></button>
+							<input id='rech' type="search" placeholder="Entrez votre recherche" name="q" />
+						</form>
 					</div>
-				</nav>
-				<nav>
-					<div id='deco'>
-						<a href='?hello=true''>Déconnexion</a>
-					</div>
-				</nav>
-				<nav>
+					
 					<div id='ajoutCarte'>
 						<a href='ajoutCartes.php'>Ajouter une carte</a>
 					</div>
-				</nav>
-				<nav>
+					
 					<div id='supprCarte'>
 						<a href='ajoutCartes.html'>Supprimer une/des carte(s)</a>
 					</div>
-				</nav>
-				<nav id='groupe'>
-					<p id='addGroupe'>Ajouter un groupe</p>
-					<img id='ajouter' src='CSS/IMG/ajouter4.png' alt='SmartScanBC'>
-					<hr>
-				</nav>
-				<nav id='cartes'>
-					$table
-				</nav>
-				<nav id='tri'>
-					<form method = 'POST'>
-					<select name ='tri'>
-						<option value ='chrono' selected='selected'>Ordre chronologique</option>
-						<option value='alpha'>Ordre alphabétique</option>
-					</select>
-					<input type='submit' name = 'conf'></button>
-					</form>
-				</nav>
+			
+					<nav id='cartes'>
+						$table
+					</nav>
+				</div>
 			</div>
 	</body>
-	</html>";
+</html>";
 								}
 								
 							}
@@ -266,55 +266,55 @@ if(isset($_SESSION['pseudo'])) {
 			<title>SmartScanBC</title>
 			<link rel='stylesheet' href='CSS/userHomePage.css'>
 			<link rel='icon' type='image/png' href='CSS/IMG/logo.png'/>
-			
 		</head>
 		<body>
 			<div id='header'>
-				<nav>
-					<a href='index.php'><img id='smartscanbc' src='CSS/IMG/smartscanbc.png' alt='SmartScanBC'></a>
-				</nav>	
-				<nav>
-					<a href='index.php'><img id='logo' src='CSS/IMG/logo.png' alt='SmartScanBC'></a>
-				</nav>
-				<nav>
-					<div id='compte'>
-						<a href='compte.php'>Mon compte</a>
+				<a href='index.php'><img id='logo' src='CSS/IMG/logo.png' alt='SmartScanBC'></a>
+				<a href='index.php'><img id='smartscanbc' src='CSS/IMG/smartscanbc.png' alt='SmartScanBC'></a>
+				<div id='compte'>
+					<a href='compte.php'>Mon compte</a>
+				</div>
+				<div id='deco'>
+					<a href='?hello=true'>Déconnexion</a>
+				</div>
+			</div>
+			
+			
+			<div id='content'>
+			
+				<div id='left'>
+					<nav id='groupe'>
+						<img id='addGroup' src='CSS/IMG/ajouter4.png' alt='SmartScanBC'>
+					</nav>
+				</div>
+				
+				
+				<div id='center'>
+					<div id='tri'>
+						<form method = 'POST'>
+							<select name ='tri'>
+								<option value ='chrono' selected='selected'>Ordre chronologique</option>
+								<option value='alpha'>Ordre alphabétique</option>
+							</select>
+							<input id='button' type='submit' name = 'conf'></button>
+							<input id='rech' type="search" placeholder="Entrez votre recherche" name="q" />
+						</form>
 					</div>
-				</nav>
-				<nav>
-					<div id='deco'>
-						<a href='?hello=true''>Déconnexion</a>
-					</div>
-				</nav>
-				<nav>
+					
 					<div id='ajoutCarte'>
 						<a href='ajoutCartes.php'>Ajouter une carte</a>
 					</div>
-				</nav>
-				<nav>
+					
 					<div id='supprCarte'>
 						<a href='ajoutCartes.html'>Supprimer une/des carte(s)</a>
 					</div>
-				</nav>
-				<nav id='groupe'>
-					<p id='addGroupe'>Ajouter un groupe</p>
-					<img id='ajouter' src='CSS/IMG/ajouter4.png' alt='SmartScanBC'>
-					<hr>
-				</nav>
-				<nav id='cartes'>
-					$table
-				</nav>
-				<nav id='tri'>
-					<form method = 'POST'>
-					<select name ='tri'>
-						<option value ='chrono' selected='selected'>Ordre chronologique</option>
-						<option value='alpha'>Ordre alphabétique</option>
-					</select>
-					<input type='submit' name = 'conf'></button>
-					</form>
-				</nav>
+			
+					<nav id='cartes'>
+						$table
+					</nav>
+				</div>
 			</div>
 	</body>
-	</html>";}
+</html>";}
 }
 ?>
