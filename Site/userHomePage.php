@@ -110,7 +110,7 @@ if(isset($_SESSION['pseudo'])) {
 								<option value='alpha' selected='selected'>Ordre alphabétique</option>
 							</select>
 							<input id='button' type='submit' name = 'conf'></button>
-							<input id='rech' type="search" placeholder="Entrez votre recherche" name="q" />
+							<input id='rech' type='search' placeholder='Entrez votre recherche' name='q' />
 						</form>
 					</div>
 					
@@ -200,7 +200,7 @@ if(isset($_SESSION['pseudo'])) {
 								<option value='alpha'>Ordre alphabétique</option>
 							</select>
 							<input id='button' type='submit' name = 'conf'></button>
-							<input id='rech' type="search" placeholder="Entrez votre recherche" name="q" />
+							<input id='rech' type='search' placeholder='Entrez votre recherche' name='q' />
 						</form>
 					</div>
 					
@@ -297,7 +297,7 @@ if(isset($_SESSION['pseudo'])) {
 								<option value='alpha'>Ordre alphabétique</option>
 							</select>
 							<input id='button' type='submit' name = 'conf'></button>
-							<input id='rech' type="search" placeholder="Entrez votre recherche" name="q" />
+							<input id='rech' type='search' placeholder='Entrez votre recherche' name='q' />
 						</form>
 					</div>
 					
