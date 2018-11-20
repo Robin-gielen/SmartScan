@@ -58,7 +58,7 @@ if(isset($_SESSION['pseudo'])) {
 											    $str .= "<td>" . $val['Telephone'] . "</td>";
 												$str .= "<td>" . $val['Adresse'] . "</td>";
 											    $str .= "<td>" . $val['Localite'] . "</td>";
-												$str .= "<td>" . $val['NomSociete'] . "</td>";
+												$str .= "<td>" . $val['Nom Société'] . "</td>";
 											    $str .= "<td>" . $val['Activite'] . "</td>";
 												$str .= "<td>" . $val['SiteWeb'] . "</td>";
 											    // add other td here if there's more
@@ -148,7 +148,7 @@ if(isset($_SESSION['pseudo'])) {
 											    $str .= "<td>" . $val['Telephone'] . "</td>";
 												$str .= "<td>" . $val['Adresse'] . "</td>";
 											    $str .= "<td>" . $val['Localite'] . "</td>";
-												$str .= "<td>" . $val['NomSociete'] . "</td>";
+												$str .= "<td>" . $val['Nom Société'] . "</td>";
 											    $str .= "<td>" . $val['Activite'] . "</td>";
 												$str .= "<td>" . $val['SiteWeb'] . "</td>";
 											    // add other td here if there's more
@@ -239,7 +239,7 @@ if(isset($_SESSION['pseudo'])) {
 										    $str .= "<td>" . $val['Telephone'] . "</td>";
 											$str .= "<td>" . $val['Adresse'] . "</td>";
 										    $str .= "<td>" . $val['Localite'] . "</td>";
-											$str .= "<td>" . $val['NomSociete'] . "</td>";
+											$str .= "<td>" . $val['Nom Société'] . "</td>";
 										    $str .= "<td>" . $val['Activite'] . "</td>";
 											$str .= "<td>" . $val['SiteWeb'] . "</td>";
 										    // add other td here if there's more
