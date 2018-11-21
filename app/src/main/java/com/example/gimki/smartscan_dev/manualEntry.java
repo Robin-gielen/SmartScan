@@ -2,6 +2,7 @@ package com.example.gimki.smartscan_dev;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.preference.PreferenceActivity;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+
+import org.json.JSONObject;
 
 public class manualEntry extends AppCompatActivity {
 
@@ -25,6 +29,7 @@ public class manualEntry extends AppCompatActivity {
         mContext = this;
 
         Button addContactButton = findViewById(R.id.manualEntryAddButton);
+
         /*
         final TextView nom = findViewById(R.id.manualEntryNameFill);
         final TextView prenom = findViewById(R.id.manualEntryFNameFill);
@@ -48,6 +53,9 @@ public class manualEntry extends AppCompatActivity {
                 String tempAddresse = addresse.getText().toString();
                 String tempCodePostal = codePostal.getText().toString();
                 String tempEntreprise = entreprise.getText().toString();
+
+
+
 
             }
         });*/
