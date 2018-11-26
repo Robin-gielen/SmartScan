@@ -48,19 +48,19 @@ if(isset($_SESSION['pseudo'])) {
 									}
 								else{
 									$myCards = mysqli_fetch_all($result2,MYSQLI_ASSOC);
-										$str = "<table><tr><th>Nom</th><th>Prenom</th><th>Mail</th><th>Telephone</th><th>Adresse</th><th>Localite</th><th>Nom Société</th><th>Activite</th><th>Site web</th></tr>";
+										$str = "<table><tr><th></th><th>Nom</th><th>Prenom</th><th>Mail</th><th>Telephone</th><th>Adresse</th><th>Localite</th><th>Nom Société</th><th>Activite</th><th>Site web</th></tr>";
 										if($myCards) {
 											  foreach($myCards as $val) {
-											    $str .= "<tr>";
-											    $str .= "<td>" . $val['Nom'] . "</td>";
-											    $str .= "<td>" . $val['Prenom'] . "</td>";
-												$str .= "<td>" . $val['Mail'] . "</td>";
-											    $str .= "<td>" . $val['Telephone'] . "</td>";
-												$str .= "<td>" . $val['Adresse'] . "</td>";
-											    $str .= "<td>" . $val['Localite'] . "</td>";
-												$str .= "<td>" . $val['NomSociete'] . "</td>";
-											    $str .= "<td>" . $val['Activite'] . "</td>";
-												$str .= "<td>" . $val['SiteWeb'] . "</td>";
+											    $str .= "<td>" . $val['Checkbox'] . "<input type='checkbox' >" . "</td>";
+											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Nom'] . "</td>";
+											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Prenom'] . "</td>";
+												$str .= "<td style='font-size: 1.2vw;'>" . $val['Mail'] . "</td>";
+											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Telephone'] . "</td>";
+												$str .= "<td style='font-size: 1.2vw;'>" . $val['Adresse'] . "</td>";
+											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Localite'] . "</td>";
+												$str .= "<td style='font-size: 1.2vw;'>" . $val['NomSociete'] . "</td>";
+											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Activite'] . "</td>";
+												$str .= "<td style='font-size: 1.2vw;'>" . $val['SiteWeb'] . "</td>";
 											    // add other td here if there's more
 											    // end of tr
 											    $str .= "</tr>";
@@ -138,19 +138,19 @@ if(isset($_SESSION['pseudo'])) {
 									}
 								else{
 									$myCards = mysqli_fetch_all($result2,MYSQLI_ASSOC);
-										$str = "<table><tr><th>Nom</th><th>Prenom</th><th>Mail</th><th>Telephone</th><th>Adresse</th><th>Localite</th><th>Nom Société</th><th>Activite</th><th>Site web</th></tr>";
+										$str = "<table><tr><th></th><th>Nom</th><th>Prenom</th><th>Mail</th><th>Telephone</th><th>Adresse</th><th>Localite</th><th>Nom Société</th><th>Activite</th><th>Site web</th></tr>";
 										if($myCards) {
 											  foreach($myCards as $val) {
-											    $str .= "<tr>";
-											    $str .= "<td>" . $val['Nom'] . "</td>";
-											    $str .= "<td>" . $val['Prenom'] . "</td>";
-												$str .= "<td>" . $val['Mail'] . "</td>";
-											    $str .= "<td>" . $val['Telephone'] . "</td>";
-												$str .= "<td>" . $val['Adresse'] . "</td>";
-											    $str .= "<td>" . $val['Localite'] . "</td>";
-												$str .= "<td>" . $val['NomSociete'] . "</td>";
-											    $str .= "<td>" . $val['Activite'] . "</td>";
-												$str .= "<td>" . $val['SiteWeb'] . "</td>";
+											    $str .= "<td>" . $val['Checkbox'] . "<input type='checkbox' >" . "</td>";
+											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Nom'] . "</td>";
+											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Prenom'] . "</td>";
+												$str .= "<td style='font-size: 1.2vw;'>" . $val['Mail'] . "</td>";
+											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Telephone'] . "</td>";
+												$str .= "<td style='font-size: 1.2vw;'>" . $val['Adresse'] . "</td>";
+											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Localite'] . "</td>";
+												$str .= "<td style='font-size: 1.2vw;'>" . $val['NomSociete'] . "</td>";
+											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Activite'] . "</td>";
+												$str .= "<td style='font-size: 1.2vw;'>" . $val['SiteWeb'] . "</td>";
 											    // add other td here if there's more
 											    // end of tr
 											    $str .= "</tr>";
@@ -229,22 +229,23 @@ if(isset($_SESSION['pseudo'])) {
 								}
 							else{
 								$myCards = mysqli_fetch_all($result2,MYSQLI_ASSOC);
-									$str = "<table><tr><th>Nom</th><th>Prenom</th><th>Mail</th><th>Telephone</th><th>Adresse</th><th>Localite</th><th>Nom Société</th><th>Activite</th><th>Site web</th></tr>";
+									$str = "<table><tr><th></th><th>Nom</th><th>Prenom</th><th>Mail</th><th>Telephone</th><th>Adresse</th><th>Localite</th><th>Nom Société</th><th>Activite</th><th>Site web</th></tr>";
 									if($myCards) {
 										  foreach($myCards as $val) {
 										    $str .= "<tr>";
-										    $str .= "<td>" . $val['Nom'] . "</td>";
-										    $str .= "<td>" . $val['Prenom'] . "</td>";
-											$str .= "<td>" . $val['Mail'] . "</td>";
-										    $str .= "<td>" . $val['Telephone'] . "</td>";
-											$str .= "<td>" . $val['Adresse'] . "</td>";
-										    $str .= "<td>" . $val['Localite'] . "</td>";
-											$str .= "<td>" . $val['NomSociete'] . "</td>";
-										    $str .= "<td>" . $val['Activite'] . "</td>";
-											$str .= "<td>" . $val['SiteWeb'] . "</td>";
-										    // add other td here if there's more
-										    // end of tr
-										    $str .= "</tr>";
+												$str .= "<td>" . $val['Checkbox'] . "<input type='checkbox' >" . "</td>";
+											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Nom'] . "</td>";
+											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Prenom'] . "</td>";
+												$str .= "<td style='font-size: 1.2vw;'>" . $val['Mail'] . "</td>";
+											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Telephone'] . "</td>";
+												$str .= "<td style='font-size: 1.2vw;'>" . $val['Adresse'] . "</td>";
+											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Localite'] . "</td>";
+												$str .= "<td style='font-size: 1.2vw;'>" . $val['NomSociete'] . "</td>";
+											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Activite'] . "</td>";
+												$str .= "<td style='font-size: 1.2vw;'>" . $val['SiteWeb'] . "</td>";
+											    // add other td here if there's more
+											    // end of tr
+											    $str .= "</tr>";
 										    
  										 }
 									}
