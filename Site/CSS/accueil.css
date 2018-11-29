@@ -37,6 +37,16 @@ body {
 
 #smartscanbc {
 	width: 50%;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+#smartscanbc:hover {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+	z-index: 1;
 }
 
 
@@ -92,7 +102,7 @@ body {
 }
 
 #annonce {
-	width: 85%;
+	width: 95%;
 	background-color: black;
 	opacity: 0.75;
 	border-radius: 20px;
@@ -113,15 +123,12 @@ body {
 	height : 15%;
 	width: 100%;
 }
-#equipe:hover {
-	opacity: 0.90;
-}
 
 #equipe {
 	width : 29%;
 	background-color: black;
 	border-radius: 20px;
-	opacity: 0.75;
+	opacity: 0.9;
 	text-align : center;
 	font-size: 1.3vw;
 	float: left;
@@ -132,17 +139,14 @@ body {
 	height: 9%;
 	background-color: black;
 	width: 100%;
-	opacity: 0.75;
-	font-size: 140%;
+	opacity: 0.9;
+	font-size: 1.3vw;
 	display: inline-block;
 	text-align: center;
 	margin: auto;
-	padding: auto;
+	margin-bottom: 0%;
+	padding-top: 3%;
 }
-#test2:hover {
-	opacity: 0.9;
-}
-
 
 #connexion:hover {
 	opacity: 0.9;
@@ -228,44 +232,32 @@ form {
 }
 
 #cond{
-	text-align : center;
-	left: 75px;
-	display : block;
-	float: left;
-	margin : 40px 100px 10px 75px;
+	margin: 3% 3%;
 }
 
 #questions{
-	text-align : center;
-	left: 75px;
-	display : block;
-	float: left;
-	margin : 40px 100px 10px 75px;
+	margin: 3% 3%;
 }
 
 #contact{
-	text-align : center;
-	left: 75px;
-	display : block;
-	float: left;
-	margin : 40px 100px 10px 75px;
+	margin: 3% 3%;
 }
 
 #donnees{
-	text-align : center;
-	left: 75px;
-	display : block;
-	float: left;
-	margin : 40px 100px 10px 75px;
+	margin: 3% 3%;
 }
 #fcb{
 	float: right;
-	margin : 1%;
+	margin-right: 1%;
+	margin-top: -1%;
+	margin-bottom: 2%;
 	width: 3%;
 }
 #twitter{
 	float: right;
-	margin: 1%;
+	margin-right: 1%;
+	margin-top: -1%;
+	margin-bottom: 2%;
 	width: 3.3%;
 }
 select{
@@ -273,10 +265,10 @@ select{
 	left: 75px;
 	display : block;
 	float: left;
-	margin : 40px 10px 10px 10px;
 	border-radius: 5px;
 	background-color: black;
 	color: white;
+	margin-left: 1%;
 }
 #logoCondCon{
 	width: 10%;
@@ -321,4 +313,16 @@ select{
 
 h3 {
 	font-size: 140%;
+}
+
+#card_1 {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+#card_1:hover {
+	-webkit-transform: scale(3);
+	transform: scale(3);
+	z-index: 1;
 }
