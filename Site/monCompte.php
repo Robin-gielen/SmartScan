@@ -8,8 +8,7 @@
 			$_SESSION = array();
 			//clear session from disk
 			session_destroy();
-			header("Location: http://www.smartscan-bc.ovh");
-			}
+			header("Location: http://www.smartscan-bc.ovh");}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -25,7 +24,7 @@
 			<a href="index.php"><img id="smartscanbc" src="CSS/IMG/smartscanbc.png" alt="SmartScanBC"></a>	
 			<a href="index.php"><img id="logo" src="CSS/IMG/logo.png" alt="SmartScanBC"></a>
 			<div id="supprimer">
-				<a>Supprimer mon compte</a>
+				<a name ='delete'>Supprimer mon compte</a>
 			</div>
 			<p></p>
 			<div id="deco">

@@ -65,6 +65,7 @@ alert("Not Connected"); // this is the message in ""
 						if($cli_password === $user['password']){
 							$_SESSION['pseudo'] = $cli_username;
 							$_SESSION['password'] = $cli_password;
+							$_SESSION['id_Utilisateur'] = $cli_uid;
 							$_SESSION['mail'] = $user['Mail'];
 							$_SESSION['nom']=$user['Nom'];
 							$_SESSION['prenom']=$user['Prenom'];
