@@ -76,7 +76,7 @@ if(isset($_SESSION['pseudo'])) {
 	<html lang='fr'>
 		<head>
 			<meta charset='utf-8'>
-			<title>SmartScanBC</title>
+			<title>Mes cartes</title>
 			<link rel='stylesheet' href='CSS/userHomePage.css'>
 			<link rel='icon' type='image/png' href='CSS/IMG/logo.png'/>
 		</head>
@@ -166,7 +166,7 @@ if(isset($_SESSION['pseudo'])) {
 	<html lang='fr'>
 		<head>
 			<meta charset='utf-8'>
-			<title>SmartScanBC</title>
+			<title>Mes cartes</title>
 			<link rel='stylesheet' href='CSS/userHomePage.css'>
 			<link rel='icon' type='image/png' href='CSS/IMG/logo.png'/>
 		</head>
@@ -264,7 +264,7 @@ if(isset($_SESSION['pseudo'])) {
 	<html lang='fr'>
 		<head>
 			<meta charset='utf-8'>
-			<title>SmartScanBC</title>
+			<title>Mes cartes</title>
 			<link rel='stylesheet' href='CSS/userHomePage.css'>
 			<link rel='icon' type='image/png' href='CSS/IMG/logo.png'/>
 		</head>
