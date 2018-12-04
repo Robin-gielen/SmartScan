@@ -39,28 +39,38 @@ if(isset($_SESSION['pseudo'])) {
 							$password2 = "vue123";
 							$conn2 = new mysqli($servername, $username2, $password2, $dbname);
 							$result2 =$conn2->query("select * from Contacts where id_Utilisateur ='$id_Utilisateur' order by id_Contact")or die($mysqli->error());
+							$catResult = $conn2->query("select Cat from Contacts where id_Utilisateur ='$id_Utilisateur' and Cat IS NOT NULL order by Cat")or die($mysqli->error());
+							if( $catResult-> num_rows > 0){
+							$cat = $catResult->fetch_assoc();
+							$categories='';
+								if($cat){
+									foreach($cat as $val){
+										$categories.='<span>'.$val.'</span>';
+									}
+								}
+							}
 								if(isset($_POST['conf'])){
 									if($_POST['tri']=='alpha'){
 									$result2 =$conn2->query("select * from Contacts where id_Utilisateur ='$id_Utilisateur' order by NomSociete")or die($mysqli->error());
-										if( $result->num_rows == 0){
+										if( $result2->num_rows == 0){
 									$_SESSION['message']= "You don't have save any BC";
 									print $_SESSION['message'];
 									}
 								else{
 									$myCards = mysqli_fetch_all($result2,MYSQLI_ASSOC);
-										$str = "<table><tr><th>Nom</th><th>Prenom</th><th>Mail</th><th>Telephone</th><th>Adresse</th><th>Localite</th><th>Nom Société</th><th>Activite</th><th>Site web</th></tr>";
+										$str = "<table><tr><th></th><th>Nom</th><th>Prenom</th><th>Mail</th><th>Telephone</th><th>Adresse</th><th>Localite</th><th>Nom Société</th><th>Activite</th><th>Site web</th></tr>";
 										if($myCards) {
 											  foreach($myCards as $val) {
-											    $str .= "<tr>";
-											    $str .= "<td>" . $val['Nom'] . "</td>";
-											    $str .= "<td>" . $val['Prenom'] . "</td>";
-												$str .= "<td>" . $val['Mail'] . "</td>";
-											    $str .= "<td>" . $val['Telephone'] . "</td>";
-												$str .= "<td>" . $val['Adresse'] . "</td>";
-											    $str .= "<td>" . $val['Localite'] . "</td>";
-												$str .= "<td>" . $val['NomSociete'] . "</td>";
-											    $str .= "<td>" . $val['Activite'] . "</td>";
-												$str .= "<td>" . $val['SiteWeb'] . "</td>";
+											    $str .= "<td>" . $val['Checkbox'] . "<input type='checkbox' >" . "</td>";
+											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Nom'] . "</td>";
+											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Prenom'] . "</td>";
+												$str .= "<td style='font-size: 1.2vw;'>" . $val['Mail'] . "</td>";
+											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Telephone'] . "</td>";
+												$str .= "<td style='font-size: 1.2vw;'>" . $val['Adresse'] . "</td>";
+											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Localite'] . "</td>";
+												$str .= "<td style='font-size: 1.2vw;'>" . $val['NomSociete'] . "</td>";
+											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Activite'] . "</td>";
+												$str .= "<td style='font-size: 1.2vw;'>" . $val['SiteWeb'] . "</td>";
 											    // add other td here if there's more
 											    // end of tr
 											    $str .= "</tr>";
@@ -76,7 +86,7 @@ if(isset($_SESSION['pseudo'])) {
 	<html lang='fr'>
 		<head>
 			<meta charset='utf-8'>
-			<title>SmartScanBC</title>
+			<title>Mes cartes</title>
 			<link rel='stylesheet' href='CSS/userHomePage.css'>
 			<link rel='icon' type='image/png' href='CSS/IMG/logo.png'/>
 		</head>
@@ -98,6 +108,7 @@ if(isset($_SESSION['pseudo'])) {
 				<div id='left'>
 					<nav id='groupe'>
 						<img id='addGroup' src='CSS/IMG/ajouter4.png' alt='SmartScanBC'>
+						$categories
 					</nav>
 				</div>
 				
@@ -138,19 +149,19 @@ if(isset($_SESSION['pseudo'])) {
 									}
 								else{
 									$myCards = mysqli_fetch_all($result2,MYSQLI_ASSOC);
-										$str = "<table><tr><th>Nom</th><th>Prenom</th><th>Mail</th><th>Telephone</th><th>Adresse</th><th>Localite</th><th>Nom Société</th><th>Activite</th><th>Site web</th></tr>";
+										$str = "<table><tr><th></th><th>Nom</th><th>Prenom</th><th>Mail</th><th>Telephone</th><th>Adresse</th><th>Localite</th><th>Nom Société</th><th>Activite</th><th>Site web</th></tr>";
 										if($myCards) {
 											  foreach($myCards as $val) {
-											    $str .= "<tr>";
-											    $str .= "<td>" . $val['Nom'] . "</td>";
-											    $str .= "<td>" . $val['Prenom'] . "</td>";
-												$str .= "<td>" . $val['Mail'] . "</td>";
-											    $str .= "<td>" . $val['Telephone'] . "</td>";
-												$str .= "<td>" . $val['Adresse'] . "</td>";
-											    $str .= "<td>" . $val['Localite'] . "</td>";
-												$str .= "<td>" . $val['NomSociete'] . "</td>";
-											    $str .= "<td>" . $val['Activite'] . "</td>";
-												$str .= "<td>" . $val['SiteWeb'] . "</td>";
+											    $str .= "<td>" . $val['Checkbox'] . "<input type='checkbox' >" . "</td>";
+											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Nom'] . "</td>";
+											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Prenom'] . "</td>";
+												$str .= "<td style='font-size: 1.2vw;'>" . $val['Mail'] . "</td>";
+											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Telephone'] . "</td>";
+												$str .= "<td style='font-size: 1.2vw;'>" . $val['Adresse'] . "</td>";
+											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Localite'] . "</td>";
+												$str .= "<td style='font-size: 1.2vw;'>" . $val['NomSociete'] . "</td>";
+											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Activite'] . "</td>";
+												$str .= "<td style='font-size: 1.2vw;'>" . $val['SiteWeb'] . "</td>";
 											    // add other td here if there's more
 											    // end of tr
 											    $str .= "</tr>";
@@ -166,7 +177,7 @@ if(isset($_SESSION['pseudo'])) {
 	<html lang='fr'>
 		<head>
 			<meta charset='utf-8'>
-			<title>SmartScanBC</title>
+			<title>Mes cartes</title>
 			<link rel='stylesheet' href='CSS/userHomePage.css'>
 			<link rel='icon' type='image/png' href='CSS/IMG/logo.png'/>
 		</head>
@@ -188,6 +199,7 @@ if(isset($_SESSION['pseudo'])) {
 				<div id='left'>
 					<nav id='groupe'>
 						<img id='addGroup' src='CSS/IMG/ajouter4.png' alt='SmartScanBC'>
+						$categories
 					</nav>
 				</div>
 				
@@ -229,22 +241,23 @@ if(isset($_SESSION['pseudo'])) {
 								}
 							else{
 								$myCards = mysqli_fetch_all($result2,MYSQLI_ASSOC);
-									$str = "<table><tr><th>Nom</th><th>Prenom</th><th>Mail</th><th>Telephone</th><th>Adresse</th><th>Localite</th><th>Nom Société</th><th>Activite</th><th>Site web</th></tr>";
+									$str = "<table><tr><th></th><th>Nom</th><th>Prenom</th><th>Mail</th><th>Telephone</th><th>Adresse</th><th>Localite</th><th>Nom Société</th><th>Activite</th><th>Site web</th></tr>";
 									if($myCards) {
 										  foreach($myCards as $val) {
 										    $str .= "<tr>";
-										    $str .= "<td>" . $val['Nom'] . "</td>";
-										    $str .= "<td>" . $val['Prenom'] . "</td>";
-											$str .= "<td>" . $val['Mail'] . "</td>";
-										    $str .= "<td>" . $val['Telephone'] . "</td>";
-											$str .= "<td>" . $val['Adresse'] . "</td>";
-										    $str .= "<td>" . $val['Localite'] . "</td>";
-											$str .= "<td>" . $val['NomSociete'] . "</td>";
-										    $str .= "<td>" . $val['Activite'] . "</td>";
-											$str .= "<td>" . $val['SiteWeb'] . "</td>";
-										    // add other td here if there's more
-										    // end of tr
-										    $str .= "</tr>";
+												$str .= "<td>" . $val['Checkbox'] . "<input type='checkbox' >" . "</td>";
+											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Nom'] . "</td>";
+											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Prenom'] . "</td>";
+												$str .= "<td style='font-size: 1.2vw;'>" . $val['Mail'] . "</td>";
+											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Telephone'] . "</td>";
+												$str .= "<td style='font-size: 1.2vw;'>" . $val['Adresse'] . "</td>";
+											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Localite'] . "</td>";
+												$str .= "<td style='font-size: 1.2vw;'>" . $val['NomSociete'] . "</td>";
+											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Activite'] . "</td>";
+												$str .= "<td style='font-size: 1.2vw;'>" . $val['SiteWeb'] . "</td>";
+											    // add other td here if there's more
+											    // end of tr
+											    $str .= "</tr>";
 										    
  										 }
 									}
@@ -263,7 +276,7 @@ if(isset($_SESSION['pseudo'])) {
 	<html lang='fr'>
 		<head>
 			<meta charset='utf-8'>
-			<title>SmartScanBC</title>
+			<title>Mes cartes</title>
 			<link rel='stylesheet' href='CSS/userHomePage.css'>
 			<link rel='icon' type='image/png' href='CSS/IMG/logo.png'/>
 		</head>
@@ -285,6 +298,7 @@ if(isset($_SESSION['pseudo'])) {
 				<div id='left'>
 					<nav id='groupe'>
 						<img id='addGroup' src='CSS/IMG/ajouter4.png' alt='SmartScanBC'>
+						$categories
 					</nav>
 				</div>
 				

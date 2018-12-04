@@ -63,7 +63,14 @@ echo"<!DOCTYPE html>
 				<img id='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
 				<img id='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
 				<img id='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
-				<img id='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard''>
+				<img id='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
+				<img id='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
+				<img id='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
+				<img id='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
+				<img id='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
+				<img id='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
+				<img id='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
+				<img id='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
 				<img id='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
 			</nav>
 		</div>

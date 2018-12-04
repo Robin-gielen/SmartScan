@@ -151,10 +151,12 @@ select{
 
 #button{
 	width: 15%;
+	font-size: 0.9vw;
 }
 
 #rech {
 	width: 30%;
+	font-size: 0.9vw;
 }
 
 a {
@@ -164,6 +166,16 @@ a {
 button{
 	background-color: black;
 	color: white;
+}
+th{
+	width: 50%;
+	font-size: 1.2vw;
+}
+tr{
+	font-size: 1.2vw;
+}
+td{
+	font-size: 1.2vw;
 }
 ::-webkit-scrollbar {
     width: 10px;
