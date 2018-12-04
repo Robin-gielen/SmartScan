@@ -2,6 +2,8 @@
 
 <?php
  session_start();
+ $table='';
+ $categories='';
  if (isset($_GET['hello'])) {
 											//remove PHPSESSID from browser
 											if ( isset( $_COOKIE[session_name()] ) )
@@ -82,64 +84,6 @@ if(isset($_SESSION['pseudo'])) {
 											$table=$_SESSION['table'];
 										
 									} 
-									echo"<!DOCTYPE html>
-	<html lang='fr'>
-		<head>
-			<meta charset='utf-8'>
-			<title>Mes cartes</title>
-			<link rel='stylesheet' href='CSS/userHomePage.css'>
-			<link rel='icon' type='image/png' href='CSS/IMG/logo.png'/>
-		</head>
-		<body>
-			<div id='header'>
-				<a href='index.php'><img id='logo' src='CSS/IMG/logo.png' alt='SmartScanBC'></a>
-				<a href='index.php'><img id='smartscanbc' src='CSS/IMG/smartscanbc.png' alt='SmartScanBC'></a>
-				<div id='compte'>
-					<a href='compte.php'>Mon compte</a>
-				</div>
-				<div id='deco'>
-					<a href='?hello=true'>Déconnexion</a>
-				</div>
-			</div>
-			
-			
-			<div id='content'>
-			
-				<div id='left'>
-					<nav id='groupe'>
-						<img id='addGroup' src='CSS/IMG/ajouter4.png' alt='SmartScanBC'>
-						$categories
-					</nav>
-				</div>
-				
-				
-				<div id='center'>
-					<div id='tri'>
-						<form method = 'POST'>
-							<select name ='tri'>
-								<option value ='chrono' >Ordre chronologique</option>
-								<option value='alpha' selected='selected'>Ordre alphabétique</option>
-							</select>
-							<input id='button' type='submit' name = 'conf'></button>
-							<input id='rech' type='search' placeholder='Entrez votre recherche' name='q' />
-						</form>
-					</div>
-					
-					<div id='ajoutCarte'>
-						<a href='ajoutCartes.php'>Ajouter une carte</a>
-					</div>
-					
-					<div id='supprCarte'>
-						<a href='ajoutCartes.html'>Supprimer une/des carte(s)</a>
-					</div>
-			
-					<nav id='cartes'>
-						$table
-					</nav>
-				</div>
-			</div>
-	</body>
-</html>";
 									}
 									if($_POST['tri']=='chrono'){
 									$result2 =$conn2->query("select * from Contacts where id_Utilisateur ='$id_Utilisateur' order by id_Contact")or die($mysqli->error());
@@ -173,64 +117,6 @@ if(isset($_SESSION['pseudo'])) {
 											$table=$_SESSION['table'];
 										
 									} 
-									echo"<!DOCTYPE html>
-	<html lang='fr'>
-		<head>
-			<meta charset='utf-8'>
-			<title>Mes cartes</title>
-			<link rel='stylesheet' href='CSS/userHomePage.css'>
-			<link rel='icon' type='image/png' href='CSS/IMG/logo.png'/>
-		</head>
-		<body>
-			<div id='header'>
-				<a href='index.php'><img id='logo' src='CSS/IMG/logo.png' alt='SmartScanBC'></a>
-				<a href='index.php'><img id='smartscanbc' src='CSS/IMG/smartscanbc.png' alt='SmartScanBC'></a>
-				<div id='compte'>
-					<a href='compte.php'>Mon compte</a>
-				</div>
-				<div id='deco'>
-					<a href='?hello=true'>Déconnexion</a>
-				</div>
-			</div>
-			
-			
-			<div id='content'>
-			
-				<div id='left'>
-					<nav id='groupe'>
-						<img id='addGroup' src='CSS/IMG/ajouter4.png' alt='SmartScanBC'>
-						$categories
-					</nav>
-				</div>
-				
-				
-				<div id='center'>
-					<div id='tri'>
-						<form method = 'POST'>
-							<select name ='tri'>
-								<option value ='chrono' selected='selected'>Ordre chronologique</option>
-								<option value='alpha'>Ordre alphabétique</option>
-							</select>
-							<input id='button' type='submit' name = 'conf'></button>
-							<input id='rech' type='search' placeholder='Entrez votre recherche' name='q' />
-						</form>
-					</div>
-					
-					<div id='ajoutCarte'>
-						<a href='ajoutCartes.php'>Ajouter une carte</a>
-					</div>
-					
-					<div id='supprCarte'>
-						<a href='ajoutCartes.html'>Supprimer une/des carte(s)</a>
-					</div>
-			
-					<nav id='cartes'>
-						$table
-					</nav>
-				</div>
-			</div>
-	</body>
-</html>";
 								}
 								
 							}
@@ -271,7 +157,6 @@ if(isset($_SESSION['pseudo'])) {
 							
 							
 				}
-				if(!isset($_POST['conf'])){
 				echo"<!DOCTYPE html>
 	<html lang='fr'>
 		<head>
@@ -329,6 +214,6 @@ if(isset($_SESSION['pseudo'])) {
 				</div>
 			</div>
 	</body>
-</html>";}
+</html>";
 }
 ?>
