@@ -1,6 +1,7 @@
 package com.example.gimki.smartscan_dev;
 
 import android.Manifest;
+import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -8,19 +9,12 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
-import android.provider.MediaStore;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.core.content.ContextCompat;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.SparseArray;
 import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.vision.Frame;
@@ -29,11 +23,16 @@ import com.google.android.gms.vision.text.TextRecognizer;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 public class Scanne extends AppCompatActivity {
 
-    EditText mResultEt;
+    TextView mResultEt;
     ImageView mPreviewIv;
 
     private static final int CAMERA_REQUEST_CODE = 200;
@@ -53,8 +52,8 @@ public class Scanne extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setSubtitle("cliquer sur l'icône d'image pour choisir un mode de scan");
 
-        mResultEt = findViewById(R.id.resultEt);
-        mPreviewIv = findViewById(R.id.imageIv);
+        mResultEt = findViewById(R.id.txtView);
+        mPreviewIv = findViewById(R.id.imageView);
 
         // Permission sur la camera
         cameraPermission = new String[]{Manifest.permission.CAMERA,
