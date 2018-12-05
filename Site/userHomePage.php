@@ -39,10 +39,20 @@ if(isset($_SESSION['pseudo'])) {
 							$password2 = "vue123";
 							$conn2 = new mysqli($servername, $username2, $password2, $dbname);
 							$result2 =$conn2->query("select * from Contacts where id_Utilisateur ='$id_Utilisateur' order by id_Contact")or die($mysqli->error());
+							$catResult = $conn2->query("select Cat from Contacts where id_Utilisateur ='$id_Utilisateur' and Cat IS NOT NULL order by Cat")or die($mysqli->error());
+							if( $catResult-> num_rows > 0){
+							$cat = $catResult->fetch_assoc();
+							$categories='';
+								if($cat){
+									foreach($cat as $val){
+										$categories.='<span>'.$val.'</span>';
+									}
+								}
+							}
 								if(isset($_POST['conf'])){
 									if($_POST['tri']=='alpha'){
 									$result2 =$conn2->query("select * from Contacts where id_Utilisateur ='$id_Utilisateur' order by NomSociete")or die($mysqli->error());
-										if( $result->num_rows == 0){
+										if( $result2->num_rows == 0){
 									$_SESSION['message']= "You don't have save any BC";
 									print $_SESSION['message'];
 									}
@@ -98,6 +108,7 @@ if(isset($_SESSION['pseudo'])) {
 				<div id='left'>
 					<nav id='groupe'>
 						<img id='addGroup' src='CSS/IMG/ajouter4.png' alt='SmartScanBC'>
+						$categories
 					</nav>
 				</div>
 				
@@ -188,6 +199,7 @@ if(isset($_SESSION['pseudo'])) {
 				<div id='left'>
 					<nav id='groupe'>
 						<img id='addGroup' src='CSS/IMG/ajouter4.png' alt='SmartScanBC'>
+						$categories
 					</nav>
 				</div>
 				
@@ -286,6 +298,7 @@ if(isset($_SESSION['pseudo'])) {
 				<div id='left'>
 					<nav id='groupe'>
 						<img id='addGroup' src='CSS/IMG/ajouter4.png' alt='SmartScanBC'>
+						$categories
 					</nav>
 				</div>
 				

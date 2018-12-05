@@ -9,6 +9,29 @@
 			//clear session from disk
 			session_destroy();
 			header("Location: http://www.smartscan-bc.ovh");}
+	if (isset($_GET['del'])) {		
+		if(isset($_SESSION['pseudo'])) {
+				$servername = "172.17.0.4:3306";
+				$username = "admin";
+				$password = "abc123";
+				$dbname = "smartscan";
+				$pseudo = $_SESSION['pseudo'];
+				// Create connection
+				$conn = new mysqli($servername, $username, $password, $dbname);
+				// Check connection
+				if ($conn->connect_error) {
+				die("Connection failed: " . $conn->connect_error);
+				}
+				$result = $conn->query("DELETE FROM Utilisateurs WHERE pseudo ='$pseudo'")or die($mysqli->error());
+				if ( isset( $_COOKIE[session_name()] ) )
+			setcookie( session_name(), “”, time()-3600, “/” );
+			//clear session from globals
+			$_SESSION = array();
+			//clear session from disk
+			session_destroy();
+			header("Location: http://www.smartscan-bc.ovh");
+	}}
+			
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -24,7 +47,7 @@
 			<a href="index.php"><img id="smartscanbc" src="CSS/IMG/smartscanbc.png" alt="SmartScanBC"></a>	
 			<a href="index.php"><img id="logo" src="CSS/IMG/logo.png" alt="SmartScanBC"></a>
 			<div id="supprimer">
-				<a name ='delete'>Supprimer mon compte</a>
+				<a href='?del=true'name ='delete' >Supprimer mon compte</a>
 			</div>
 			<p></p>
 			<div id="deco">
