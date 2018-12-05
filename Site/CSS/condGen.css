@@ -32,7 +32,7 @@ body {
 	height : 26%;
 	float: left;
 }
-#condGen{
+#titreFaq{
 	width: 95%;
 	background-color: black;
 	opacity: 0.75;
@@ -41,7 +41,16 @@ body {
 	margin: 5% auto 2% auto;
 	padding: 0.7%;
 }
-
+#faq{
+	float: left;
+	width: 99%;
+	background-color: black;
+	opacity: 0.75;
+	border-radius: 20px;
+	height : 12%;
+	margin: 1%;
+	margin-top: 2%;
+}
 #blabla {
 	background-color: black;
 	opacity: 0.75;
@@ -62,4 +71,13 @@ h2{
 #contact {
 	color: black;
 	font-size: 130%;
+}
+a:link {
+    color: white;
+}
+a:visited {
+    color: white;
+}
+a:hover {
+    color: red;
 }
