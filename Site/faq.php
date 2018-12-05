@@ -12,8 +12,8 @@
 	</head>
 	<body>
 		<div>
-				<a href="index.html"><img id="smartscanbc" src="CSS/IMG/smartscanbc.png" alt="SmartScanBC"></a>
-				<a href="index.html"><img id="logoCond" src="CSS/IMG/logo.png" alt="SmartScanBC"></a>
+				<a href="index.php"><img id="smartscanbc" src="CSS/IMG/smartscanbc.png" alt="SmartScanBC"></a>
+				<a href="index.php"><img id="logoCond" src="CSS/IMG/logo.png" alt="SmartScanBC"></a>
 		</div>
 		<div>
 			<div id="titreFaq">
