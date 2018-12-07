@@ -4,6 +4,7 @@
 		<title>Inscription</title>
         <link rel="stylesheet" href="CSS/inscription.css" media="screen" type="text/css" />
 		<link rel="icon" type="image/png" href="CSS/IMG/logo.png"/>
+		<title>Inscription</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 		<script>
 			$('#password, #confform').on('keyup', function () {

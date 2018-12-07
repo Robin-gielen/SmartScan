@@ -46,7 +46,9 @@ echo"<!DOCTYPE html>
 				</div>";
 	}
 	echo"
-			
+				<div id='toutesCartes'>
+					<a href='toutesCartes.php'>Voir toutes les cartes</a>
+				</div>
 		</div>	
 		
 		<div id='content'>
@@ -56,37 +58,37 @@ echo"<!DOCTYPE html>
 			</nav>
 			
 			<nav id='annonce'>
-				<img id='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
-				<img id='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
-				<img id='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
-				<img id='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
-				<img id='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
-				<img id='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
-				<img id='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
-				<img id='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
-				<img id='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
-				<img id='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
-				<img id='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
-				<img id='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
-				<img id='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
-				<img id='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
-				<img id='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
-				<img id='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
+				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
+				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
+				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
+				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
+				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
+				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
+				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
+				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
+				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
+				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
+				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
+				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
+				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
+				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
+				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
+				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
 			</nav>
 		</div>
 		<div id='footer'>
-			<div id='equipe'>
+			<div class='equipe'>
 				<h3>Qui sommes-nous?</h3>
 				<p>Nous sommes 7 etudiants de l'Ephec, devores par notre passion commune qu'est l'informatique.
 				   Plus d'informations concernant notre equipe <a href='team.php'>ici</a>
 				</p>
 			</div>
-			<div id='equipe'>
+			<div class='equipe'>
 				<h3>A quoi sert le site web?</h3>
 				<p>Ce site permet de recencer toutes les cartes de visites scannees via 'SmartScan BC'. Vous pouvez donc chercher ici les informations
 				relatives au corps de metier qui vous interesse. </p>
 			</div>
-			<div id='equipe'>
+			<div class='equipe'>
 				<h3>A quoi sert l'app?</h3>
 				<p>Avec l'application 'SmartScan BC', vous pouvez scanner les cartes de visites que vous possedez et les ajouter automatiquement dans vos contacts
 				telephoniques.</p>
@@ -99,11 +101,11 @@ echo"<!DOCTYPE html>
 				<a href='' id='donnees'>A propos de vos donnees</a>
 				<a href='https://www.facebook.com/SmartScanBC/'><img id='fcb' src='CSS/IMG/fcb.png' alt='Facebook'></a>
 				<a href='https://twitter.com/SmartScanBC'><img id='twitter' src='CSS/IMG/Twitter.png' alt='Twitter'></a>
-				<select>
+				<!-- <select>
 					<option>francais</option>
 					<option>anglais</option>
 					<option>neerlandais</option>
-				</select>
+				</select>-->
 		</div>
 </body>
 </html>";

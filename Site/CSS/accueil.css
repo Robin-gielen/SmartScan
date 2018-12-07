@@ -95,7 +95,19 @@ body {
 	top: 20.5%;
 	text-align: center;
 }
-
+#toutesCartes{
+	font-size: 1.3vw;
+	width: 10%;
+    padding: 1%;
+    background-color: black;
+	border-radius: 20px;
+	opacity: 0.75;
+	float : right;
+	position: absolute;
+	right: 2%;
+	top: 29%;
+	text-align: center;
+}
 #content {
 	width: 100%;
 	text-align: center;
@@ -124,7 +136,7 @@ body {
 	width: 100%;
 }
 
-#equipe {
+.equipe {
 	width : 29%;
 	background-color: black;
 	border-radius: 20px;
@@ -171,7 +183,7 @@ a {
 	/**margin-top: 2%;**/
 }
 
-#card_1 {
+.card_1 {
 	width: 8%;
 	margin: 1.5%;
 }
@@ -248,16 +260,12 @@ form {
 }
 #fcb{
 	float: right;
-	margin-right: 1%;
-	margin-top: -1%;
-	margin-bottom: 2%;
+	margin : 0.5%;
 	width: 3%;
 }
 #twitter{
 	float: right;
-	margin-right: 1%;
-	margin-top: -1%;
-	margin-bottom: 2%;
+	margin: 0.5%;
 	width: 3.3%;
 }
 select{
@@ -315,13 +323,13 @@ h3 {
 	font-size: 140%;
 }
 
-#card_1 {
+.card_1 {
 	-webkit-transform: scale(1);
 	transform: scale(1);
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
 }
-#card_1:hover {
+.card_1:hover {
 	-webkit-transform: scale(3);
 	transform: scale(3);
 	z-index: 1;

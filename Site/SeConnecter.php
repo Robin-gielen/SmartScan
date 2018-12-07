@@ -7,6 +7,8 @@
     <head>
        <meta charset="utf-8">
         <link rel="stylesheet" href="CSS/accueil.css" media="screen" type="text/css" />
+		<title>Connexion</title>
+		<link rel='icon' type='image/png' href='CSS/IMG/logo.png'/>
 		<script>
 function myFunctionConn()
 {
