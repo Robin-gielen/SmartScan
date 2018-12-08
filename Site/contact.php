@@ -16,7 +16,7 @@
 				<a href="index.php"><img id="logoCond" src="CSS/IMG/logo.png" alt="SmartScanBC"></a>
 		</div>
 		<div>
-			<nav id="condGen">
+			<nav id="titre">
 				<h2>Contact</h2>
 			</nav>
 		</div>

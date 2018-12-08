@@ -32,14 +32,15 @@ body {
 	height : 26%;
 	float: left;
 }
-#titreFaq{
-	width: 95%;
+#titre{
+	float: left;
+	width: 99%;
 	background-color: black;
 	opacity: 0.75;
 	border-radius: 20px;
 	height : 12%;
-	margin: 5% auto 2% auto;
-	padding: 0.7%;
+	margin: 1%;
+	margin-top: 2%;
 }
 #faq{
 	float: left;
@@ -56,10 +57,10 @@ body {
 	opacity: 0.75;
 	border-radius: 20px;
 	color: white;
-	width: 91%;
+	width: 80%;
 	text-align: center;
 	margin: auto;
-	margin-top: 3%;
+	margin-top: 15%;
 	padding: 2%;
 }
 
@@ -75,9 +76,13 @@ h2{
 a:link {
     color: white;
 }
+
+/* visited link */
 a:visited {
     color: white;
 }
+
+/* mouse over link */
 a:hover {
     color: red;
 }

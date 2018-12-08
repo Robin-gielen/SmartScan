@@ -59,7 +59,7 @@
 				<span id='message'></span>
 				
 				<input id="checkbox" type="checkbox" name="confirmer" required>
-				<label><b>Je suis d'accord avec les conditions d'utilisation</b></label>
+				<label><b><a href="http://www.smartscan-bc.ovh/condGenerales.php">Je suis d'accord avec les conditions d'utilisation</a></b></label>
                 <input type="submit" id='submit' name='submit' value='Créer mon compte' >
             </form>
         </div>

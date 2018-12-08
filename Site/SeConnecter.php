@@ -34,7 +34,7 @@ alert("Not Connected"); // this is the message in ""
                 <input type="password" placeholder="Entrer le mot de passe" name="cli_password" required>
 
                 <input type="submit" id='submit' value='LOGIN' name ="login" >
-				<p>Nom d'utilisateur ou mot de passe oublié ?</p> 
+				<a href="http://www.smartscan-bc.ovh/contact.php">Nom d'utilisateur ou mot de passe oublié ?</a> 
             </form>
         </div>
 		<?php

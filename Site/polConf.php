@@ -16,8 +16,8 @@
         <a href="index.php"><img id="smartscanbc" src="CSS/IMG/smartscanbc.png" alt="SmartScanBC"></a>
         <a href="index.php"><img id="logoCond" src="CSS/IMG/logo.png" alt="SmartScanBC"></a>
     </div>
-        <nav id="condGen">
-            <h2>Conditions Générales</h2>
+        <nav id="titre">
+            <h2>Politique de confidentialité</h2>
         </nav>
     <div id="blabla">
         <span class="stabilisation"></span>

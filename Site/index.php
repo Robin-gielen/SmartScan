@@ -80,7 +80,7 @@ echo"<!DOCTYPE html>
 			<div class='equipe'>
 				<h3>Qui sommes-nous?</h3>
 				<p>Nous sommes 7 etudiants de l'Ephec, devores par notre passion commune qu'est l'informatique.
-				   Plus d'informations concernant notre equipe <a href='team.php'>ici</a>
+				   Plus d'informations concernant notre equipe <a href='team.php'><u>ici</u></a>
 				</p>
 			</div>
 			<div class='equipe'>
@@ -95,10 +95,10 @@ echo"<!DOCTYPE html>
 			</div>
 		</div>
 		<div id='test2'>
-				<a href='condGenerales.php' id='cond'>Conditions generales</a>
+				<a href='condGenerale.php' id='cond'>Conditions generales</a>
 				<a href='faq.php' id='questions'>Foire aux questions</a>
 				<a href='contact.php' id='contact'>Contact</a>
-				<a href='' id='donnees'>A propos de vos donnees</a>
+				<a href='polConf.php' id='donnees'>Politique de confidentialité </a>
 				<a href='https://www.facebook.com/SmartScanBC/'><img id='fcb' src='CSS/IMG/fcb.png' alt='Facebook'></a>
 				<a href='https://twitter.com/SmartScanBC'><img id='twitter' src='CSS/IMG/Twitter.png' alt='Twitter'></a>
 				<!-- <select>

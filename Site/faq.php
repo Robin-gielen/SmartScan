@@ -16,7 +16,7 @@
 				<a href="index.php"><img id="logoCond" src="CSS/IMG/logo.png" alt="SmartScanBC"></a>
 		</div>
 		<div>
-			<div id="titreFaq">
+			<div id="titre">
 				<h1>Foire aux questions</h2>
 			</div>
 			<div id="faq">
