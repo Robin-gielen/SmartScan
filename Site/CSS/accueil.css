@@ -103,9 +103,7 @@ body {
 	border-radius: 20px;
 	opacity: 0.75;
 	float : right;
-	position: absolute;
-	right: 2%;
-	top: 29%;
+	margin : 15% 2% 1% 1%;
 	text-align: center;
 }
 #content {
@@ -129,6 +127,7 @@ body {
 #logo{
 	width: 17%;
 	margin: 2%;
+	margin-left: 15%;
 }
 
 #footer {

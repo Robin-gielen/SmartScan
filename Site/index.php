@@ -59,12 +59,12 @@ echo"<!DOCTYPE html>
 			
 			<nav id='annonce'>
 				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
+				<img class='card_1' src='CSS/IMG/2.jpg' alt='BusinessCard'>
+				<img class='card_1' src='CSS/IMG/3.png' alt='BusinessCard'>
+				<img class='card_1' src='CSS/IMG/4.jpg' alt='BusinessCard'>
+				<img class='card_1' src='CSS/IMG/5.jpg' alt='BusinessCard'>
 				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
-				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
-				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
-				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
-				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
-				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
+				<img class='card_1' src='CSS/IMG/8.jpg' alt='BusinessCard'>
 				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
 				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
 				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
