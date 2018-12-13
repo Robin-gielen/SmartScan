@@ -1,4 +1,8 @@
-
+<script>
+			function catFind(element){
+				document.getElementById("rech").value=element;
+			}
+</script>
 
 <?php
  session_start();
@@ -45,7 +49,8 @@ if(isset($_SESSION['pseudo'])) {
 							$categories='';
 								if($cat){
 									foreach($cat as $val){
-										$categories.='<span><br>-'.$val['Cat'].'</span><br>';
+									$value =(string)$val['Cat'];
+										$categories.='<br><a onclick = catFind("'.$val['Cat'].'")>'.$value.'</a><br><br>';
 									}
 								}
 							}
