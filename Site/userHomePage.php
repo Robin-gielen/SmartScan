@@ -58,10 +58,9 @@ if(isset($_SESSION['pseudo'])) {
 									}
 								else{
 									$myCards = mysqli_fetch_all($result2,MYSQLI_ASSOC);
-										$str = "<table><tr><th></th><th>Nom</th><th>Prenom</th><th>Mail</th><th>Telephone</th><th>Adresse</th><th>Localite</th><th>Nom Société</th><th>Activite</th><th>Site web</th></tr>";
+										$str = "<table><tr><th>Nom</th><th>Prenom</th><th>Mail</th><th>Telephone</th><th>Adresse</th><th>Localite</th><th>Nom Société</th><th>Activite</th><th>Site web</th></tr>";
 										if($myCards) {
 											  foreach($myCards as $val) {
-											    $str .= "<td>" . $val['Checkbox'] . "<input type='checkbox' >" . "</td>";
 											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Nom'] . "</td>";
 											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Prenom'] . "</td>";
 												$str .= "<td style='font-size: 1.2vw;'>" . $val['Mail'] . "</td>";
@@ -128,11 +127,6 @@ if(isset($_SESSION['pseudo'])) {
 					<div id='ajoutCarte'>
 						<a href='ajoutCartes.php'>Ajouter une carte</a>
 					</div>
-					
-					<div id='supprCarte'>
-						<a href='ajoutCartes.html'>Supprimer une/des carte(s)</a>
-					</div>
-			
 					<nav id='cartes'>
 						$table
 					</nav>
@@ -149,10 +143,9 @@ if(isset($_SESSION['pseudo'])) {
 									}
 								else{
 									$myCards = mysqli_fetch_all($result2,MYSQLI_ASSOC);
-										$str = "<table><tr><th></th><th>Nom</th><th>Prenom</th><th>Mail</th><th>Telephone</th><th>Adresse</th><th>Localite</th><th>Nom Société</th><th>Activite</th><th>Site web</th></tr>";
+										$str = "<table><tr><th>Nom</th><th>Prenom</th><th>Mail</th><th>Telephone</th><th>Adresse</th><th>Localite</th><th>Nom Société</th><th>Activite</th><th>Site web</th></tr>";
 										if($myCards) {
 											  foreach($myCards as $val) {
-											    $str .= "<td>" . $val['Checkbox'] . "<input type='checkbox' >" . "</td>";
 											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Nom'] . "</td>";
 											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Prenom'] . "</td>";
 												$str .= "<td style='font-size: 1.2vw;'>" . $val['Mail'] . "</td>";
@@ -219,11 +212,6 @@ if(isset($_SESSION['pseudo'])) {
 					<div id='ajoutCarte'>
 						<a href='ajoutCartes.php'>Ajouter une carte</a>
 					</div>
-					
-					<div id='supprCarte'>
-						<a href='ajoutCartes.html'>Supprimer une/des carte(s)</a>
-					</div>
-			
 					<nav id='cartes'>
 						$table
 					</nav>
@@ -241,11 +229,10 @@ if(isset($_SESSION['pseudo'])) {
 								}
 							else{
 								$myCards = mysqli_fetch_all($result2,MYSQLI_ASSOC);
-									$str = "<table><tr><th></th><th>Nom</th><th>Prenom</th><th>Mail</th><th>Telephone</th><th>Adresse</th><th>Localite</th><th>Nom Société</th><th>Activite</th><th>Site web</th></tr>";
+									$str = "<table><tr><th>Nom</th><th>Prenom</th><th>Mail</th><th>Telephone</th><th>Adresse</th><th>Localite</th><th>Nom Société</th><th>Activite</th><th>Site web</th></tr>";
 									if($myCards) {
 										  foreach($myCards as $val) {
 										    $str .= "<tr>";
-												$str .= "<td>" . $val['Checkbox'] . "<input type='checkbox' >" . "</td>";
 											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Nom'] . "</td>";
 											    $str .= "<td style='font-size: 1.2vw;'>" . $val['Prenom'] . "</td>";
 												$str .= "<td style='font-size: 1.2vw;'>" . $val['Mail'] . "</td>";
@@ -348,11 +335,6 @@ if(isset($_SESSION['pseudo'])) {
 					<div id='ajoutCarte'>
 						<a href='ajoutCartes.php'>Ajouter une carte</a>
 					</div>
-					
-					<div id='supprCarte'>
-						<a href='ajoutCartes.html'>Supprimer une/des carte(s)</a>
-					</div>
-			
 					<nav id='cartes'>
 						$strSearch
 					</nav>
@@ -412,11 +394,6 @@ if(isset($_SESSION['pseudo'])) {
 					<div id='ajoutCarte'>
 						<a href='ajoutCartes.php'>Ajouter une carte</a>
 					</div>
-					
-					<div id='supprCarte'>
-						<a href='ajoutCartes.html'>Supprimer une/des carte(s)</a>
-					</div>
-			
 					<nav id='cartes'>
 						$table
 					</nav>
