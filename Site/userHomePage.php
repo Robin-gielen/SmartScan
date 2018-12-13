@@ -41,11 +41,11 @@ if(isset($_SESSION['pseudo'])) {
 							$result2 =$conn2->query("select * from Contacts where id_Utilisateur ='$id_Utilisateur' order by id_Contact")or die($mysqli->error());
 							$catResult = $conn2->query("select Cat from Contacts where id_Utilisateur ='$id_Utilisateur' and Cat IS NOT NULL order by Cat")or die($mysqli->error());
 							if( $catResult-> num_rows > 0){
-							$cat = $catResult->fetch_assoc();
+							$cat = mysqli_fetch_all($catResult,MYSQLI_ASSOC);
 							$categories='';
 								if($cat){
 									foreach($cat as $val){
-										$categories.='<span>'.$val.'</span>';
+										$categories.='<span><br>-'.$val['Cat'].'</span><br>';
 									}
 								}
 							}
