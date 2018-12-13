@@ -175,6 +175,7 @@ tr{
 }
 td{
 	font-size: 1.2vw;
+	text-align: center;
 }
 ::-webkit-scrollbar {
     width: 10px;

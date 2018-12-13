@@ -111,10 +111,10 @@ body {
 	background-color: black;
 	border-radius: 20px;
 	opacity: 0.75;
-	height: 21.2em;
 	text-align: center;
 	margin-top: 25%;
 	margin-left: 10%;
+	font-size: 1.1vw;
 }
 
 #addGroup{
@@ -175,6 +175,7 @@ tr{
 }
 td{
 	font-size: 1.2vw;
+	text-align: center;
 }
 ::-webkit-scrollbar {
     width: 10px;
