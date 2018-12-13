@@ -45,7 +45,7 @@
 				<label><b>Site web</b></label>
 				<input type="text" placeholder="Entrez l'url du site web" name="siteWeb">
 				
-				<label><b>Catégorie</b></label>
+				<label><b>Catégorie (un seul mot)</b></label>
 				<input type="text" placeholder="Entrez un nom de catégorie" name="cat">
 				
 				
