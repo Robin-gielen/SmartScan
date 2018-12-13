@@ -65,12 +65,13 @@
 				}
 				if(isset($_POST['conf'])){
 					$search = $_POST['q'];
-					$result2 = $conn->query("SELECT Nom, Prenom,Mail, Telephone, Adresse, Localite, NomSociete, Activite, SiteWeb  from Contacts WHERE CONCAT(Nom, Prenom,Mail, Telephone, Adresse, Localite, NomSociete, Activite, SiteWeb  from Contacts) LIKE \"%'$search'%\"")or die($mysqli->error());
-					if( $result->num_rows == 0){
-						$_SESSION['message']= "Il n'y a pas encore de cartes mises en avant avec cette recherche";
-						print $_SESSION['message'];
-						}
-				else{
+					$servername = "172.17.0.4:3306";
+					$username = "show";
+					$password = "vue123";
+					$dbname = "smartscan";
+					$conn2 = new mysqli($servername, $username, $password, $dbname);
+					$result2 = $conn2->query("SELECT Nom, Prenom,Mail, Telephone, Adresse, Localite, NomSociete, Activite, SiteWeb  from Contacts WHERE premium = 1 and CONCAT(Nom, Prenom,Mail, Telephone, Adresse, Localite, NomSociete, Activite, SiteWeb) LIKE '%".$search."%'")or die($mysqli->error());
+					if( $result->num_rows != 0){
 				$primeCardsSearch = mysqli_fetch_all($result2,MYSQLI_ASSOC);
 				$strSearch = "<table><tr><th>Nom</th><th>Prenom</th><th>Mail</th><th>Telephone</th><th>Adresse</th><th>Localite</th><th>Nom Société</th><th>Activite</th><th>Site web</th></tr>";
 										if($primeCardsSearch) {
@@ -117,6 +118,9 @@
 							</div>
 					</body>
 				</html>";
+		}
+		else {
+		echo "No result";
 		}
 	}
 php?>
