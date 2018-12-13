@@ -3,7 +3,6 @@
 				document.getElementById("rech").value=element;
 			}
 </script>
-
 <?php
  session_start();
  if (isset($_GET['hello'])) {
@@ -49,7 +48,7 @@ if(isset($_SESSION['pseudo'])) {
 							$categories='';
 								if($cat){
 									foreach($cat as $val){
-									$value =(string)$val['Cat'];
+										$value =(string)$val['Cat'];
 										$categories.='<br><a onclick = catFind("'.$val['Cat'].'")>'.$value.'</a><br><br>';
 									}
 								}
