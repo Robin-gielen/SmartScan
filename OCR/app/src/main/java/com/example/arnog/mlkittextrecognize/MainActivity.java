@@ -1,9 +1,12 @@
 package com.example.arnog.mlkittextrecognize;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -16,11 +19,24 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.util.SparseArray;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.vision.Frame;
@@ -29,25 +45,48 @@ import com.google.android.gms.vision.text.TextRecognizer;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
+import java.util.ArrayList;
+
 import androidx.core.app.ActivityCompat;
 
 public class MainActivity extends AppCompatActivity {
 
     EditText mResultEt;
     ImageView mPreviewIv;
+    Button mSaveText;
+    Spinner mSpinnerList;
+    //ListView mInfoCard;
+    Button mSaveCard;
+    TextView mCatNom;
+    TextView mCatPrenom;
+    TextView mCatMail;
+    TextView mCatTel;
+    TextView mCatAdr;
+    TextView mCatLocal;
+    TextView mCatSoc;
+    TextView mCatMetier;
+    TextView mCatSite;
+
+
+
 
     private static final int CAMERA_REQUEST_CODE = 200;
     private static final int STORAGE_REQUEST_CODE = 400;
     private static final int IMAGE_PICK_GALLERY_CODE = 1000;
     private static final int IMAGE_PICK_CAMERA_CODE = 1001;
 
+
+    
+    
     String cameraPermission[];
     String storagePermission[];
 
-    Uri image_uri;
+    String[] categ = {"nom","prenom","mail","telephone","adresse","localite","nom société", "métier","site"};
 
+    Uri image_uri;//image découpé
+    Uri totalImage;//toute l'image
 
-
+    int numPosition;//position de la catégorie
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,14 +95,149 @@ public class MainActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setSubtitle("cliquer sur l'icône d'image pour choisir un mode de scan");
 
-       mResultEt = findViewById(R.id.resultEt);
-       mPreviewIv = findViewById(R.id.imageIv);
+        mResultEt = (EditText) findViewById(R.id.resultEt);
+        mPreviewIv = (ImageView) findViewById(R.id.imageIv);
+        mSaveText = (Button) findViewById(R.id.saveButton);
+        mSpinnerList = (Spinner) findViewById(R.id.spinnerList);
+        //mInfoCard = (ListView) findViewById(R.id.infoCard);
+        mSaveCard = (Button) findViewById(R.id.saveCardButton);
 
-       // Permission sur la camera
+        mCatNom = (TextView) findViewById(R.id.catNom);
+        mCatPrenom = (TextView) findViewById(R.id.catPrenom);
+        mCatMail = (TextView) findViewById(R.id.catMail);
+        mCatTel = (TextView) findViewById(R.id.catTel);
+        mCatAdr = (TextView) findViewById(R.id.catAdr);
+        mCatLocal = (TextView) findViewById(R.id.catLocal);
+        mCatSoc = (TextView) findViewById(R.id.catSoc);
+        mCatMetier = (TextView) findViewById(R.id.catMetier);
+        mCatSite = (TextView) findViewById(R.id.catSite);
+
+
+        mSaveText.setEnabled(false);
+
+
+        //MyAdapter adapter = new MyAdapter(this,categ,categInfo.ToString());
+        /*CustomAdapter customAdapter = new CustomAdapter();
+        mInfoCard.setAdapter(customAdapter);*/
+
+        // Permission sur la camera
         cameraPermission = new String[]{Manifest.permission.CAMERA,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE};
         //Permission sur le stockage
         storagePermission = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE};
+
+            mResultEt.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                }
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    mSaveText.setEnabled(s.toString().length() != 0);
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+                }
+            });
+
+            mSaveText.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //fonction pour écrire dans la zone de texte
+                    scanText();
+                }
+            });
+
+            mSaveCard.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mCatNom.setText("Nom : ");
+                    mCatPrenom.setText("Prénom : ");
+                    mCatMail.setText("Mail : ");
+                    mCatTel.setText("Téléphone : ");
+                    mCatAdr.setText("Adresse : ");
+                    mCatLocal.setText("Localité : ");
+                    mCatSoc.setText("Nom de la Société : ");
+                    mCatMetier.setText("Métier : ");
+                    mCatSite.setText("Site : ");
+                    mPreviewIv.setImageURI(null);
+
+                }
+            });
+
+        //mettre les catégories dans le spinner + ascenseur
+        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(MainActivity.this,
+                android.R.layout.simple_list_item_1, categ);//liste dans strings.xml
+        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mSpinnerList.setAdapter(myAdapter);
+        mSpinnerList.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if(position >= 0 && position < Card.getArray().size()){
+                    numPosition = position;
+                }
+                else{
+                    Toast.makeText(MainActivity.this,"Selected category does not exist", Toast.LENGTH_LONG).show();
+                }
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        }
+
+    //fonction pour écrire dans la zone de texte
+    public void scanText() {
+        //contenu récupéré du scan
+        EditText extractText = (EditText) findViewById(R.id.resultEt);
+        String textCard = extractText.getText().toString();
+
+            switch (numPosition){
+                case 0 :
+                    mCatNom.setText("Nom : " + textCard);
+                    Card.setNom(textCard);
+                    break;
+                case 1 :
+                    mCatPrenom.setText("Prénom : " + textCard);
+                    Card.setPrenom(textCard);
+                    break;
+                case 2 :
+                    mCatMail.setText("Mail : " + textCard);
+                    Card.setMail(textCard);
+                    break;
+                case 3 :
+                    mCatTel.setText("Téléphone : " + textCard);
+                    Card.setNom(textCard);
+                    break;
+                case 4 :
+                    mCatAdr.setText("Adresse : " + textCard);
+                    Card.setNom(textCard);
+                    break;
+                case 5 :
+                    mCatLocal.setText("Localité : " + textCard);
+                    Card.setNom(textCard);
+                    break;
+                case 6 :
+                    mCatSoc.setText("Nom de la Société : " + textCard);
+                    Card.setNom(textCard);
+                    break;
+                case 7 :
+                    mCatMetier.setText("Métier : " + textCard);
+                    Card.setNom(textCard);
+                    break;
+                case 8 :
+                    mCatSite.setText("Site : " + textCard);
+                    Card.setNom(textCard);
+                    break;
+            }
+
+        Card.setImage(totalImage);
+        if(Card.getArray().get(0) != null){
+            Log.i("DEBUG","catégorie sauver dans tableau !");
+        }
     }
 
     // Barre d'actions du menu
@@ -74,19 +248,14 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-
-
-
-
-
     // Gère les clics des divers éléments présents dans la barre d'action
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.addImage){
+        if (id == R.id.addImage) {
             showImageImportDialog();
         }
-        if (id == R.id.settings){
+        if (id == R.id.settings) {
             Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
         }
         return super.onOptionsItemSelected(item);
@@ -102,25 +271,23 @@ public class MainActivity extends AppCompatActivity {
         dialog.setItems(items, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                if (which == 0){
+                if (which == 0) {
                     // Option de la camera choisie
                     // pour Android Marshmallow et supérieur, demande d'autorisation d'exécution pour la caméra et le stockage
-                    if (!checkCameraPermission()){
+                    if (!checkCameraPermission()) {
                         // Si permission d'accès à la caméra pas autorisée, le demander
                         requestCameraPermission();
-                    }
-                    else {
+                    } else {
                         // Permission d'accès à la caméra autorisée, prendre la photo
                         pickCamera();
                     }
                 }
-                if (which == 1){
+                if (which == 1) {
                     // Option de la bibliothèque de photos choisie
-                    if (!checkStoragePermission()){
+                    if (!checkStoragePermission()) {
                         // Si permission d'accès au stockage de l'appareil, le demander
                         requestStoragePermission();
-                    }
-                    else{
+                    } else {
                         // Permission accordée
                         pickGallery();
                     }
@@ -146,6 +313,7 @@ public class MainActivity extends AppCompatActivity {
         values.put(MediaStore.Images.Media.TITLE, "NewPic"); //Titre de l'image
         values.put(MediaStore.Images.Media.DESCRIPTION, "Image To text"); //Description de l'image
         image_uri = getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
+        totalImage = getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
 
         Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, image_uri);
@@ -172,8 +340,8 @@ public class MainActivity extends AppCompatActivity {
     // Vérification de la demande d'accès à l'appareil photo du téléphone
     private boolean checkCameraPermission() {
         /*Vérifie la permission et retourne le résultat
-        * Pour avoir une image de haute qualité, il faut sauver l'image dans le stockage externe de l'appareil
-        * avant de l'ajouter à "l'image view", il faut donc demander également la permission d'accès au stockage
+         * Pour avoir une image de haute qualité, il faut sauver l'image dans le stockage externe de l'appareil
+         * avant de l'ajouter à "l'image view", il faut donc demander également la permission d'accès au stockage
          */
 
 
@@ -185,34 +353,31 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
     // Gérer le résultat des permissions (Refusé, accepté...)
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        switch (requestCode){
+        switch (requestCode) {
             case CAMERA_REQUEST_CODE:
-                if (grantResults.length >0){
+                if (grantResults.length > 0) {
                     boolean cameraAccpeted = grantResults[0] ==
                             PackageManager.PERMISSION_GRANTED;
                     boolean writeStorageAccepted = grantResults[0] ==
                             PackageManager.PERMISSION_GRANTED;
-                    if (cameraAccpeted && writeStorageAccepted){
+                    if (cameraAccpeted && writeStorageAccepted) {
                         pickCamera();
-                    }
-                    else{
+                    } else {
                         Toast.makeText(this, "permission denied", Toast.LENGTH_SHORT).show();
                     }
                 }
                 break;
 
             case STORAGE_REQUEST_CODE:
-                if (grantResults.length >0){
+                if (grantResults.length > 0) {
                     boolean writeStorageAccepted = grantResults[0] ==
                             PackageManager.PERMISSION_GRANTED;
-                    if (writeStorageAccepted){
+                    if (writeStorageAccepted) {
                         pickGallery();
-                    }
-                    else{
+                    } else {
                         Toast.makeText(this, "permission denied", Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -223,8 +388,8 @@ public class MainActivity extends AppCompatActivity {
     // Gérer le résulat de l'image
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        if (resultCode == RESULT_OK){
-            if (requestCode == IMAGE_PICK_GALLERY_CODE){
+        if (resultCode == RESULT_OK) {
+            if (requestCode == IMAGE_PICK_GALLERY_CODE) {
                 // Réception de l'image depuis la bibliothèque, la recadrer
                 CropImage.activity(data.getData())
                         .setGuidelines(CropImageView.Guidelines.ON) //Activation du "guideur" d'image
@@ -232,50 +397,48 @@ public class MainActivity extends AppCompatActivity {
 
 
             }
-            if (requestCode == IMAGE_PICK_CAMERA_CODE){
+            if (requestCode == IMAGE_PICK_CAMERA_CODE) {
                 // Réception de l'image depuis la caméra, la recadrer
                 CropImage.activity(image_uri)
                         .setGuidelines(CropImageView.Guidelines.ON) //Activation du "guideur" d'image
                         .start(this);
-                }
+            }
         }
         // Prendre l'image recadrée
-        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE){
+        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
             CropImage.ActivityResult result = CropImage.getActivityResult(data);
-            if (resultCode == RESULT_OK){
-               Uri resultUri = result.getUri(); // Réception de l'uri de l'image
+            if (resultCode == RESULT_OK) {
+                Uri resultUri = result.getUri(); // Réception de l'uri de l'image
                 // Régler l'image sur l'affichage de l'image
                 mPreviewIv.setImageURI(resultUri);
 
                 // Obtenir des images bitmap dessinables pour la reconnaissance de texte
-                BitmapDrawable bitmapDrawable = (BitmapDrawable)mPreviewIv.getDrawable();
+                BitmapDrawable bitmapDrawable = (BitmapDrawable) mPreviewIv.getDrawable();
                 Bitmap bitmap = bitmapDrawable.getBitmap();
 
                 TextRecognizer recognizer = new TextRecognizer.Builder(getApplicationContext()).build();
 
-                if (!recognizer.isOperational()){
+                if (!recognizer.isOperational()) {
                     Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
-                }
-                else {
+                } else {
                     Frame frame = new Frame.Builder().setBitmap(bitmap).build();
                     SparseArray<TextBlock> items = recognizer.detect(frame);
                     StringBuilder sb = new StringBuilder();
                     // Recevoir du texte du StringBuilder jusqu'à si il n'y en a pas
-                    for (int i =0; i<items.size(); i++){
+                    for (int i = 0; i < items.size(); i++) {
                         TextBlock myItem = items.valueAt(i);
                         sb.append(myItem.getValue());
                         sb.append("\n");
                     }
                     // Définir le texte pour éditer le texte
                     mResultEt.setText(sb.toString());
+                    //mResultEt.setText(entreprise.toString());
                 }
-            }
-            else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE){
-                    // S'il y a une erreur, l'afficher.
-                    Exception error = result.getError();
-                    Toast.makeText(this, ""+error, Toast.LENGTH_SHORT).show();
+            } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
+                // S'il y a une erreur, l'afficher.
+                Exception error = result.getError();
+                Toast.makeText(this, "" + error, Toast.LENGTH_SHORT).show();
             }
         }
     }
-
 }
