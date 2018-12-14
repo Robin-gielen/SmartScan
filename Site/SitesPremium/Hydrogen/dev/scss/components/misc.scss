@@ -1,0 +1,127 @@
+// -------------------------------------
+// ★ Misc Styles - Line breaks, borders, etc
+// -------------------------------------
+
+// Line Break
+$lineBreakColor: $colorOlive;
+$shapeColor: $colorBlue;
+
+.br {
+  position: relative;
+  border: 0 solid $lineBreakColor;
+  border-top-width: 1px;
+  height: 0;
+  @include margin(30px auto);
+  clear: both;
+  display: block;
+  width: 590px;
+  &:after, &:before {
+    content: "";
+    display: block;
+    @include position(absolute, null null null 50%);
+    overflow: hidden;
+    @include transform(rotate(45deg));
+  }
+  &:after {
+    @include size(10px);
+    @include margin(-6px null null -6px);
+    background: $shapeColor;
+  }
+  &:before {
+    @include size(17px);
+    @include margin(-9px null null -9px);
+    background: $colorWhite;
+  }
+}
+
+
+// Menu Arrow
+.menu-arrow {
+  display: none;
+  @include position(relative, null null null null);
+  cursor: pointer;
+  z-index: 40;
+  margin: 0 auto;
+  @include killios;
+  @include size(33px 30px);
+  .text {
+    display: block;
+    font: {
+      family: $opensans;
+      size: 10px;
+      weight: 600;
+    }
+    color: $colorWhite;
+    @include opacity(0);
+    @include transition(all .3s ease-out);
+  }
+
+  .left, .right {
+    position: absolute;
+    display: block;
+    @include size(20px 3px);
+    background: $colorWhite;
+    @include transition(all .3s ease-out);
+    @include killflicker;
+  }
+  .left {
+    left: 0;
+    @include transform(rotate(45deg));
+  }
+  .right {
+    right: 0;
+    @include transform(rotate(135deg));
+  }
+
+  &:hover {
+    .text {
+      @include opacity(1);
+      @include transform(translateY(8px));
+    }
+    .left, .right {
+      @include opacity(0);
+      @include transform(rotate(90deg));
+    }
+    .left { left: -15px; }
+    .right { right: -15px; }
+  }
+}
+
+// Opened
+.menu-arrow.open {
+
+  .text { @include opacity(0); }
+  .left, .right { @include transform(translateY(0)); @include opacity(.5); }
+  .left {
+    left: 6px;
+    @include transform(rotate(45deg));
+  }
+  .right {
+    right: 7px;
+    @include transform(rotate(-45deg));
+  }
+}
+
+// Back To Top
+#toTop {
+  @include position(fixed, null 75px 20px null);
+  display: inline-block;
+  @include size(44px);
+  background: $colorPink url(../images/icon_arrow_up.svg) no-repeat center 50%;
+  visibility: hidden;
+  opacity: 0;
+  border-radius: 5px;
+  @include transition(all .3s ease-out);
+  @include killios;
+
+  &.is-visible { 
+    visibility: visible;
+    opacity: 1;
+    @include animation(bounce-in .3s linear);
+  }
+
+  .no-touch &:hover {
+    background-color: rgba($colorPink, 1);
+    opacity: 1;
+  }
+}

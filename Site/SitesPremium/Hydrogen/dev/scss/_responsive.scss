@@ -1,0 +1,62 @@
+// -------------------------------------
+// ★ Tablet Styles
+// -------------------------------------
+@media screen and (min-width: 767px) and (max-width: 510px) {
+  .site-inner { width: $tabletWidth; }
+}
+
+
+// -------------------------------------
+// ★ Mobile Styles
+// -------------------------------------
+@media screen and (min-width: 320px) and (max-width: 767px) {
+
+  // Turning off hover states on touch devices
+  .touch {
+    // Team
+    .team .item {
+      &:hover {
+        .info { background: transparent; }
+        img { @include transform(scale(1) translateY(0px)); }
+      }
+    }
+  }
+
+  .site-inner { width: $mobileWidth; padding: 0 20px; }
+  .br { width: 100%; }
+
+  // HEADER
+  .header { 
+    header { margin: 0 !important; }
+  }
+  .logo { margin: 0 auto 20px auto !important; padding-top: 30px; float: none !important; }
+  .menu-arrow { display: block; }
+  .h-hero { font-size: 33px !important; }
+  .h-hero-alt { margin-top: 20px !important; font-size: 34px !important; }
+  .contact-trigger {
+    &:before, &:after { width: 50px !important; }
+  }
+
+  // WHO ARE WE?
+  .about {
+    h2 { margin: 8px 0 18px 0 !important; }
+    h4 { margin-bottom: 5px !important; }
+  }
+}
+
+// Mobile Small
+@media screen and (min-width: 320px) and (max-width: 510px) {
+}
+
+// Mobile
+@media screen and (min-width: 320px) and (max-width: 767px) {
+}
+
+// Tablet
+@media screen and (min-width: 767px) and (max-width: 510px) {
+  
+}
+
+// Desktop
+@media screen and (min-width: 1170px) and (max-width: 1600px) {
+}
