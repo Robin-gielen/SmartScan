@@ -78,6 +78,7 @@
 					if(mysqli_query($conn,"insert into Contacts(Nom, Prenom, Mail, Telephone, Adresse, Localite, NomSociete,Activite,id_Utilisateur,SiteWeb, Cat)
 					values ('$nom','$prenom','$mail','$telephone','$adresse','$ville','$nomEntreprise','$actiEntreprise','$id_Utilisateur','$site','$cat')")){
 						echo "<br>carte ajoutée";
+						header("Location: http://www.smartscan-bc.ovh/userHomePage.php");
 					}
 					
 				}
