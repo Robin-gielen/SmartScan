@@ -125,39 +125,37 @@
 				<a href='?hello=true'>Déconnexion</a>
 			</div>
 			<nav id="compte">
-				
-					<h1 id="Inscription">Modification de votre profil</h1>
 					<form  method="POST">
 					<label><b>Pseudo</b></label>
-					<input type="text" placeholder="Modifié votre pseudo" name="username" required>
+					<input type="text" placeholder="Modifier votre pseudo" name="username" required>
 					<input type="submit" id='submit' value='Enregistrer'  name ='conf1'>
 					</form>
 					<form  method="POST">
 					<label><b>Nom</b></label>
-					<input type="text" placeholder="Modifié votre nouveau nom" name="nom" required>
+					<input type="text" placeholder="Modifier votre nouveau nom" name="nom" required>
 					<input type="submit" id='submit' value='Enregistrer'  name ='conf2'>
 					</form>
 					<form  method="POST">
 					<label><b>Prénom</b></label>
-					<input type="text" placeholder="Modifié votre prénom" name="prenom" required>
+					<input type="text" placeholder="Modifier votre prénom" name="prenom" required>
 					<input type="submit" id='submit' value='Enregistrer'  name ='conf3'>
 					</form>
 					<form  method="POST">
 					<label><b>Adresse email</b></label>
-					<input type="text" placeholder="Modifié votre adresse email" name="email" required>
+					<input type="text" placeholder="Modifier votre adresse email" name="email" required>
 					<input type="submit" id='submit' value='Enregistrer'  name ='conf4'>
 					</form>
 					<form  method="POST">
 					<label><b>Localité</b></label>
-					<input type="text" placeholder="Modifié votre localité" name="localite" required>
+					<input type="text" placeholder="Modifier votre localité" name="localite" required>
 					<input type="submit" id='submit' value='Enregistrer'  name ='conf5'>
 					</form>
 					<form  method="POST">
 					<label><b>Mot de passe</b></label>
-					<input type="password" placeholder="Modifié votre mot de passe" name="password" required>
+					<input type="password" placeholder="Modifier votre mot de passe" name="password" required>
 					
 					<label><b>Confirmer le mot de passe</b></label>
-					<input type="password" placeholder="Ré-entré le mot de passe" name="passwordConf" required>
+					<input type="password" placeholder="Ré-entrer le mot de passe" name="passwordConf" required>
 					<input type="submit" id='submit' value='Enregistrer'  name ='conf6'>
 					</form>
 

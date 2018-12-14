@@ -78,8 +78,8 @@ input[type=text], input[type=password] {
 input[type=submit] {
     background-color: #800000;
     color: white;
-    padding: 3% 20%;
-    margin: 5% 0;
+    padding: 2%;
+    margin: 2% 0;
     border: none;
     cursor: pointer;
     width: 100%;
@@ -94,8 +94,11 @@ form {
     width:85%;
     padding: 4%;
     box-shadow: 0 0 20% 0 rgba(0, 0, 0, 0.2), 0 5% 5% 0 rgba(0, 0, 0, 0.24);
+	margin-top : -5%;
 }
-
+b{
+	font-size: 2vw;
+}
 a {
 	color: white;
 	/**margin-top: 2%;**/
