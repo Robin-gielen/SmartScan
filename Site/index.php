@@ -94,6 +94,9 @@ echo"<!DOCTYPE html>
 				telephoniques.</p>
 			</div>
 		</div>
+		<div>
+			<p id='nodrop'>Ne jetez pas vos cartes de visites à terre, pensez à la planète  <img id='imgdrop' src='CSS/IMG/drop.png' alt='greenlogo'></p>
+		</div>
 		<div id='test2'>
 				<a href='condGenerale.php' id='cond'>Conditions generales</a>
 				<a href='faq.php' id='questions'>Foire aux questions</a>
