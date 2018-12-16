@@ -63,16 +63,16 @@ echo"<!DOCTYPE html>
 				<img class='card_1' src='CSS/IMG/3.png' alt='BusinessCard'>
 				<img class='card_1' src='CSS/IMG/4.jpg' alt='BusinessCard'>
 				<img class='card_1' src='CSS/IMG/5.jpg' alt='BusinessCard'>
-				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
+				<img class='card_1' src='CSS/IMG/9.jpg' alt='BusinessCard'>
 				<img class='card_1' src='CSS/IMG/8.jpg' alt='BusinessCard'>
-				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
-				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
-				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
-				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
-				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
-				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
-				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
-				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
+				<img class='card_1' src='CSS/IMG/10.jpg' alt='BusinessCard'>
+				<img class='card_1' src='CSS/IMG/11.jpg' alt='BusinessCard'>
+				<img class='card_1' src='CSS/IMG/12.jpg' alt='BusinessCard'>
+				<img class='card_1' src='CSS/IMG/13.jpg' alt='BusinessCard'>
+				<img class='card_1' src='CSS/IMG/14.jpg' alt='BusinessCard'>
+				<img class='card_1' src='CSS/IMG/15.jpg' alt='BusinessCard'>
+				<img class='card_1' src='CSS/IMG/16.jpg' alt='BusinessCard'>
+				<img class='card_1' src='CSS/IMG/17.jpg' alt='BusinessCard'>
 				<img class='card_1' src='CSS/IMG/1.jpg' alt='BusinessCard'>
 			</nav>
 		</div>
