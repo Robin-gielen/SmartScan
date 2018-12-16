@@ -101,14 +101,10 @@ echo"<!DOCTYPE html>
 				<a href='condGenerale.php' id='cond'>Conditions generales</a>
 				<a href='faq.php' id='questions'>Foire aux questions</a>
 				<a href='contact.php' id='contact'>Contact</a>
+				<a href='tarif.php' id='donnees'>Nos tarifs</a>
 				<a href='polConf.php' id='donnees'>Politique de confidentialité </a>
 				<a href='https://www.facebook.com/SmartScanBC/'><img id='fcb' src='CSS/IMG/fcb.png' alt='Facebook'></a>
 				<a href='https://twitter.com/SmartScanBC'><img id='twitter' src='CSS/IMG/Twitter.png' alt='Twitter'></a>
-				<!-- <select>
-					<option>francais</option>
-					<option>anglais</option>
-					<option>neerlandais</option>
-				</select>-->
 		</div>
 </body>
 </html>";
