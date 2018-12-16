@@ -79,19 +79,19 @@ echo"<!DOCTYPE html>
 		<div id='footer'>
 			<div class='equipe'>
 				<h3>Qui sommes-nous?</h3>
-				<p>Nous sommes 7 etudiants de l'Ephec, devores par notre passion commune qu'est l'informatique.
+				<p>Nous sommes 7 etudiants de l'Ephec, devorés par notre passion commune qu'est l'informatique.
 				   Plus d'informations concernant notre equipe <a href='team.php'><u>ici</u></a>
 				</p>
 			</div>
 			<div class='equipe'>
 				<h3>A quoi sert le site web?</h3>
-				<p>Ce site permet de recencer toutes les cartes de visites scannees via 'SmartScan BC'. Vous pouvez donc chercher ici les informations
-				relatives au corps de metier qui vous interesse. </p>
+				<p>Ce site permet de recencer toutes les cartes de visites scannées via 'SmartScan BC'. De plus, vous avez la possibilité
+				de voir les differentes entreprises qui sont mises en avant
+				</p>
 			</div>
 			<div class='equipe'>
 				<h3>A quoi sert l'app?</h3>
-				<p>Avec l'application 'SmartScan BC', vous pouvez scanner les cartes de visites que vous possedez et les ajouter automatiquement dans vos contacts
-				telephoniques.</p>
+				<p>Avec l'application 'SmartScan BC', vous pouvez scanner les cartes de visites que vous possedez et de les trier à votre guise afin d'alléger votre portefeuille. </p>
 			</div>
 		</div>
 		<div>
