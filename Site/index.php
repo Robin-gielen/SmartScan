@@ -58,7 +58,7 @@ echo"<!DOCTYPE html>
 			</nav>
 			
 			<nav id='annonce'>
-				<a href= http://www.smartscan-bc.ovh\SitesPremium\Hydrogen\app\index.html ><img class='card_1' src='CSS/IMG/bc hydrogen.png' alt='BusinessCard'></a>
+				<a href= http://www.smartscan-bc.ovh\SitesPremium\Hydrogen\app\index.html ><img class='card_1' src='CSS/IMG/18.jpg' alt='BusinessCard'></a>
 				<img class='card_1' src='CSS/IMG/2.jpg' alt='BusinessCard'>
 				<img class='card_1' src='CSS/IMG/3.png' alt='BusinessCard'>
 				<img class='card_1' src='CSS/IMG/4.jpg' alt='BusinessCard'>
