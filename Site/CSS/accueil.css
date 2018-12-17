@@ -269,7 +269,7 @@ form {
 	margin: 3% 3%;
 }
 
-#donnees{
+.donnees{
 	margin: 3% 3%;
 }
 #fcb{
@@ -344,7 +344,7 @@ h3 {
 	transition: .3s ease-in-out;
 }
 .card_1:hover {
-	-webkit-transform: scale(3.2);
-	transform: scale(3.2);
+	-webkit-transform: scale(3);
+	transform: scale(3);
 	z-index: 1;
 }

@@ -58,7 +58,7 @@ echo"<!DOCTYPE html>
 			</nav>
 			
 			<nav id='annonce'>
-				<a href= http://www.smartscan-bc.ovh\SitesPremium\Hydrogen\app\index.html ><img class='card_1' src='CSS/IMG/18.jpg' alt='BusinessCard'></a>
+				<a href='http://www.smartscan-bc.ovh/SitesPremium/Hydrogen/app/index.html'><img class='card_1' src='CSS/IMG/18.jpg' alt='BusinessCard'></a>
 				<img class='card_1' src='CSS/IMG/2.jpg' alt='BusinessCard'>
 				<img class='card_1' src='CSS/IMG/3.png' alt='BusinessCard'>
 				<img class='card_1' src='CSS/IMG/4.jpg' alt='BusinessCard'>
@@ -101,8 +101,8 @@ echo"<!DOCTYPE html>
 				<a href='condGenerale.php' id='cond'>Conditions generales</a>
 				<a href='faq.php' id='questions'>Foire aux questions</a>
 				<a href='contact.php' id='contact'>Contact</a>
-				<a href='tarif.php' id='donnees'>Nos tarifs</a>
-				<a href='polConf.php' id='donnees'>Politique de confidentialité </a>
+				<a href='tarif.php' class='donnees'>Nos tarifs</a>
+				<a href='polConf.php' class='donnees'>Politique de confidentialité </a>
 				<a href='https://www.facebook.com/SmartScanBC/'><img id='fcb' src='CSS/IMG/fcb.png' alt='Facebook'></a>
 				<a href='https://twitter.com/SmartScanBC'><img id='twitter' src='CSS/IMG/Twitter.png' alt='Twitter'></a>
 		</div>
