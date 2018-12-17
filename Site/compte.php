@@ -20,7 +20,7 @@ echo "<!DOCTYPE html>
 <html lang='fr'>
 	<head>
 		<meta charset='utf-8'>
-		<title>Mon Compte</title>
+		<title>SmartScan BC - Mon Compte</title>
 		<link rel='stylesheet' href='CSS/compte.css'>
 		<link rel='icon' type='image/png' href='CSS/IMG/logo.png'/>
 		<link rel='icon' type='image/png' href='CSS/IMG/logo.png'/>

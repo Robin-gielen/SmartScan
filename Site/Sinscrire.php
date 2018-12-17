@@ -1,7 +1,7 @@
 <html>
     <head>
        <meta charset="utf-8">
-		<title>Inscription</title>
+		<title>SmartScan BC - Inscription</title>
         <link rel="stylesheet" href="CSS/inscription.css" media="screen" type="text/css" />
 		<link rel="icon" type="image/png" href="CSS/IMG/logo.png"/>
 		<title>Inscription</title>
