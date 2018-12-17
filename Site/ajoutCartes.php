@@ -5,7 +5,7 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
-		<title>SmartScanBC</title>
+		<title>SmartScanBC - Ajout de carte</title>
 		<link rel="stylesheet" href="CSS/ajoutCartes.css">
 		<link rel="icon" type="image/png" href="CSS/IMG/logo.png"/>
 	</head>

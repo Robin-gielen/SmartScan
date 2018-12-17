@@ -6,7 +6,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Conditions générales</title>
+    <title>SmartScan BC - Conditions générales</title>
     <link rel="stylesheet" href="CSS/condGen.css">
     <link rel="icon" type="image/png" href="CSS/IMG/logo.png" />
 </head>

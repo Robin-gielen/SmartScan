@@ -108,7 +108,7 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
-		<title>Modification du compte</title>
+		<title>SmartScan BC - Modification du compte</title>
 		<link rel="stylesheet" href="CSS/monCompte.css">
 		<link rel="icon" type="image/png" href="CSS/IMG/logo.png"/>
 		<link rel="icon" type="image/png" href="CSS/IMG/logo.png"/>

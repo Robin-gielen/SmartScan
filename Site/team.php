@@ -5,7 +5,7 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
-		<title>L'équipe</title>
+		<title>SmartScan BC - L'équipe</title>
 		<link rel="stylesheet" href="CSS/team.css">
 		<link rel="icon" type="image/png" href="CSS/IMG/logo.png"/>
 	</head>

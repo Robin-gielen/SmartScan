@@ -37,7 +37,7 @@
           <li class="pricing-features-item">Mise en avant de votre carte de visite sur notre page d'accueil</li>
           <li class="pricing-features-item">Reprend les services de l'abonnement "basique"</li>
         </ul>
-        <span class="pricing-price">50 cent / an</span>
+        <span class="pricing-price">7.5€ / mois</span>
       </div>
       
       <div class="pricing-plan">
@@ -47,7 +47,7 @@
           <li class="pricing-features-item">Création de votre site vitrine personalisé</li>
           <li class="pricing-features-item">Reprend les services de l'abonnement "premium"</li>
         </ul>
-        <span class="pricing-price">50€ / an</span>
+        <span class="pricing-price">50€ / mois</span>
       </div>
       
     </div>

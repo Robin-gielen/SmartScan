@@ -6,7 +6,7 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
-		<title>Contact</title>
+		<title>SmartScan BC - Contact</title>
 		<link rel="stylesheet" href="CSS/condGen.css">
 		<link rel="icon" type="image/png" href="CSS/IMG/logo.png"/>
 	</head>
