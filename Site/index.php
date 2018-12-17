@@ -47,7 +47,7 @@ echo"<!DOCTYPE html>
 	}
 	echo"
 				<div id='toutesCartes'>
-					<a href='toutesCartes.php'>Voir toutes les cartes</a>
+					<a href='toutesCartes.php'>Recherche entreprise</a>
 				</div>
 		</div>	
 		
